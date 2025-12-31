@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="HIQurate Ops - Get Audited by Certified ISO 27002:2022 Lead Auditors. Premium cybersecurity services for SMEs. Assess. Build. Conquer.">
+    <title>HIQurate Ops – Get Audited by ISO 27002:2022 Certified Lead Auditors</title>
+    <link rel="icon" href="images/5pNHqQAIiM2t6gaRND7xa9Epl41Ruqjg17URKJHoSyx3u7Rh8ozG2W8Vsivi0XAa.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/enhanced-style.css">
+
+    <style>
+        /* EPIC LOADING ANIMATION */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0e27 0%, #161b2e 50%, #0f1729 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 3rem;
+            animation: logoReveal 2s ease-in-out;
+            filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.5));
+        }
+
+        .loader-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            animation: textGlow 2s ease-in-out infinite;
+        }
+
+        .loader-subtext {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .scanner-line {
+            width: 400px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+            margin-bottom: 2rem;
+            animation: scan 2s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+        }
+
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 10px;
+            margin-top: 2rem;
+        }
+
+        .grid-cell {
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 6px;
+            animation: cellPulse 3s ease-in-out infinite;
+        }
+
+        .grid-cell:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .grid-cell:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .grid-cell:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .grid-cell:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .grid-cell:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .grid-cell:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        .grid-cell:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        .grid-cell:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+
+        @keyframes logoReveal {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) rotateY(180deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1) rotateY(0deg);
+            }
+        }
+
+        @keyframes textGlow {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.8));
+            }
+        }
+
+        @keyframes scan {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes cellPulse {
+
+            0%,
+            100% {
+                border-color: rgba(0, 212, 255, 0.3);
+                background: transparent;
+            }
+
+            50% {
+                border-color: rgba(0, 212, 255, 1);
+                background: rgba(0, 212, 255, 0.2);
+                box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+            }
+        }
+
+        /* Certifica badge styles */
+        .cert-badge {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+            border: 2px solid rgba(0, 212, 255, 0.4);
+            border-radius: 50px;
+            color: var(--cyber-blue);
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            animation: badgePulse 3s ease-in-out infinite;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes badgePulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- EPIC LOADING ANIMATION -->
+    <div id="loader">
+        <img src="images/a9nzUONUiR0nbGnuz35gkC9PFJiiBQRYiMin9fFkCntrTWScOx0eneKCb20GMjPl.png" alt="HIQurate Ops"
+            class="loader-logo">
+        <div class="loader-text">Initializing Security Protocols</div>
+        <div class="loader-subtext">Scanning Digital Landscape...</div>
+        <div class="scanner-line"></div>
+        <div class="security-grid">
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+            <div class="grid-cell"></div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index-ultimate.html">
+                    <img src="images/a9nzUONUiR0nbGnuz35gkC9PFJiiBQRYiMin9fFkCntrTWScOx0eneKCb20GMjPl.png"
+                        alt="HIQurate Ops">
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#what-we-do">Services</a></li>
+                    <li><a href="#abc-framework">ABC Framework</a></li>
+                    <li><a href="#who-we-are">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Certification Badge -->
+    <section class="hero" id="home">
+        <div class="hero-visual">
+            <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 0.2;">
+                <source
+                    src="https://cdn.pixabay.com/vimeo/370802782/data-12832.mp4?width=1280&hash=af8534b3e76e46e1c5d058a06ee55da25f8e99a5"
+                    type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-content">
+            <div class="cert-badge">🏆 ISO 27002:2022 Certified Lead Auditors</div>
+            <p class="tagline">Curated Intelligence, Assured Security</p>
+            <h1>Assess. Build. Conquer.</h1>
+            <p style="font-size: 1.3rem; max-width: 900px; margin: 0 auto 3rem;">
+                Get audited by certified professionals. Protecting small and medium-sized businesses
+                in an increasingly hostile digital landscape with practical, transparent, and affordable cybersecurity.
+            </p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#abc-framework" class="btn btn-primary">Explore ABC Framework</a>
+                <a href="#contact" class="btn btn-outline">Get Your Free Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="what-we-do" style="background: var(--bg-deep);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>What We Do At HIQurate Ops</h2>
+                <p
+                    style="color: var(--text-muted); font-size: 1.2rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Comprehensive cybersecurity solutions tailored for businesses that handle sensitive data
+                    but often lack the visibility, resources, or in-house expertise to defend against modern threats.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Risk Assessment -->
+                <div class="flip-card reveal-stagger">
+                    <div class="flip-card-inner">
+                        <!-- Front of Card -->
+                        <div class="flip-card-front">
+                            <div class="feature-image">
+                                <img src="/Users/kritikaahuja/.gemini/antigravity/brain/bf69b96b-503e-4395-bab3-7b6881f54684/cyber_risk_assessment_1767171574820.png"
+                                    alt="Cyber Risk Assessment">
+                            </div>
+                            <div class="feature-icon">🛡️</div>
+                            <h3>Cyber Risk & Resilience Assessment</h3>
+                            <p class="short-text">Comprehensive security assessments to identify vulnerabilities and
+                                strengthen resilience.</p>
+                        </div>
+                        <!-- Back of Card -->
+                        <div class="flip-card-back">
+                            <div class="feature-icon">🛡️</div>
+                            <h3>Cyber Risk & Resilience Assessment</h3>
+                            <p class="full-text">
+                                Helping organisations identify vulnerabilities in their systems, processes, and policies
+                                through comprehensive security assessments and audits. Providing clear, actionable
+                                recommendations to close gaps and enhance overall cybersecurity resilience against
+                                evolving threats.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Threat Protection -->
+                <div class="flip-card reveal-stagger">
+                    <div class="flip-card-inner">
+                        <!-- Front of Card -->
+                        <div class="flip-card-front">
+                            <div class="feature-image">
+                                <img src="/Users/kritikaahuja/.gemini/antigravity/brain/bf69b96b-503e-4395-bab3-7b6881f54684/threat_protection_visual_1767171592948.png"
+                                    alt="Advanced Threat Protection">
+                            </div>
+                            <div class="feature-icon">🔒</div>
+                            <h3>Advanced Threat Protection Plans</h3>
+                            <p class="short-text">Proactive threat detection and mitigation before they cause harm.</p>
+                        </div>
+                        <!-- Back of Card -->
+                        <div class="flip-card-back">
+                            <div class="feature-icon">🔒</div>
+                            <h3>Advanced Threat Protection Plans</h3>
+                            <p class="full-text">
+                                Enabling organisations to proactively detect, assess, and mitigate potential threats
+                                before
+                                they can cause harm. By continuously monitoring the organisation's digital footprint and
+                                providing a strategic plan to reduce the attack surface and strengthen overall security
+                                defenses.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Implementation -->
+                <div class="flip-card reveal-stagger">
+                    <div class="flip-card-inner">
+                        <!-- Front of Card -->
+                        <div class="flip-card-front">
+                            <div class="feature-image">
+                                <img src="/Users/kritikaahuja/.gemini/antigravity/brain/bf69b96b-503e-4395-bab3-7b6881f54684/security_implementation_visual_1767171612860.png"
+                                    alt="Security Implementation">
+                            </div>
+                            <div class="feature-icon">⚙️</div>
+                            <h3>Security Solutioning & Implementation</h3>
+                            <p class="short-text">End-to-end deployment, configuration, and training for security
+                                solutions.</p>
+                        </div>
+                        <!-- Back of Card -->
+                        <div class="flip-card-back">
+                            <div class="feature-icon">⚙️</div>
+                            <h3>Security Solutioning & Implementation</h3>
+                            <p class="full-text">
+                                Assisting businesses with the evaluation of security products and solutions in their
+                                best
+                                interests, as well as the end-to-end deployment of such solutions, configurations in
+                                accordance
+                                with business needs, tuning, training, and handling.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monitoring -->
+                <div class="flip-card reveal-stagger">
+                    <div class="flip-card-inner">
+                        <!-- Front of Card -->
+                        <div class="flip-card-front">
+                            <div class="feature-image">
+                                <img src="/Users/kritikaahuja/.gemini/antigravity/brain/bf69b96b-503e-4395-bab3-7b6881f54684/realtime_monitoring_visual_1767171632185.png"
+                                    alt="Real-Time Monitoring">
+                            </div>
+                            <div class="feature-icon">👁️</div>
+                            <h3>Real-Time Security Monitoring</h3>
+                            <p class="short-text">24/7 expert SOC monitoring for rapid threat detection and response.
+                            </p>
+                        </div>
+                        <!-- Back of Card -->
+                        <div class="flip-card-back">
+                            <div class="feature-icon">👁️</div>
+                            <h3>Real-Time Security Monitoring</h3>
+                            <p class="full-text">
+                                Providing around-the-clock monitoring of security events to detect and respond to
+                                threats
+                                in real time. Leveraging advanced analytics, threat intelligence, and expert SOC
+                                analysts,
+                                ensuring rapid incident investigation and containment, minimizing potential business
+                                impact.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABC Framework Section -->
+    <section id="abc-framework">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>ABC of Cybersecurity</h2>
+                <h3 style="color: var(--cyber-blue); margin-top: 1rem;">Assess. Build. Conquer.</h3>
+                <p style="color: var(--text-muted); font-size: 1.2rem; margin-top: 1.5rem;">
+                    Secure Your Digital Assets Today
+                </p>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 4rem;" class="reveal">
+                <img src="/Users/kritikaahuja/.gemini/antigravity/brain/bf69b96b-503e-4395-bab3-7b6881f54684/abc_cybersecurity_visual_1767171651006.png"
+                    alt="ABC Framework"
+                    style="max-width: 600px; width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl), var(--glow-blue);">
+            </div>
+
+            <div class="pricing-grid">
+                <!-- A - Assess -->
+                <div class="pricing-card reveal-stagger">
+                    <div class="icon-wrapper" style="background: linear-gradient(135deg, #00d4ff 0%, #14b8a6 100%);">A
+                    </div>
+                    <h3>Assess – Attack Surface Snapshot</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem;">
+                        Uncover risks and gain visibility before attackers do.
+                    </p>
+                    <ul class="pricing-features">
+                        <li>External & internal risk scans</li>
+                        <li>Risk scoring & severity mapping</li>
+                        <li>Vulnerability identification</li>
+                        <li>Quick remediation tips</li>
+                        <li>Executive summary report</li>
+                        <li>Clear actionable insights</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%; margin-top: 2rem;">Start
+                        Assessment</a>
+                </div>
+
+                <!-- B - Build -->
+                <div class="pricing-card featured reveal-stagger">
+                    <div class="icon-wrapper" style="background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);">B
+                    </div>
+                    <h3>Build – Baseline Security Review</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem;">
+                        Strengthen your foundation with compliance and resilience.
+                    </p>
+                    <ul class="pricing-features">
+                        <li>Comprehensive vulnerability analysis</li>
+                        <li>Security configuration check</li>
+                        <li>Compliance assessment (ISO, SOC2)</li>
+                        <li>Detailed remediation roadmap</li>
+                        <li>Policy & process review</li>
+                        <li>Full technical report</li>
+                        <li>Quarterly security reviews</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Build Now</a>
+                </div>
+
+                <!-- C - Conquer -->
+                <div class="pricing-card reveal-stagger">
+                    <div class="icon-wrapper" style="background: linear-gradient(135deg, #6366f1 0%, #00d4ff 100%);">C
+                    </div>
+                    <h3>Conquer – Cyber 360° Defence</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem;">
+                        Achieve always-on protection with 24/7 defence and support.
+                    </p>
+                    <ul class="pricing-features">
+                        <li>24/7/365 Always-On Protection</li>
+                        <li>Bespoke Security Blueprint</li>
+                        <li>Rapid Incident Containment</li>
+                        <li>End-to-End Implementation</li>
+                        <li>Dedicated security architect</li>
+                        <li>Operational Support</li>
+                        <li>Red team exercises</li>
+                        <li>Executive threat briefings</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" style="width: 100%; margin-top: 2rem;">Conquer
+                        Threats</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;" class="reveal">
+                <p style="font-size: 1.3rem; color: var(--text-glow); margin-bottom: 1rem;">
+                    <strong>Pick your plan. Protect your business. Progress with confidence.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section id="who-we-are" style="background: var(--bg-secondary); position: relative; overflow: hidden;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Who We Are</h2>
+            </div>
+
+            <div class="reveal" style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2rem; line-height: 1.9; color: var(--text-secondary); margin-bottom: 2rem;">
+                    <strong style="color: var(--text-glow);">HIQurate Ops</strong> is a cybersecurity services company
+                    focused on
+                    protecting small and medium-sized businesses in an increasingly hostile digital landscape. We work
+                    with
+                    organisations that handle sensitive data but often lack the visibility, resources, or in-house
+                    expertise
+                    required to defend against modern cyber threats.
+                </p>
+
+                <p style="font-size: 1.2rem; line-height: 1.9; color: var(--text-secondary); margin-bottom: 3rem;">
+                    We believe cybersecurity should be <span
+                        style="color: var(--cyber-blue); font-weight: 700;">practical, transparent, and
+                        affordable</span>,
+                    not complicated, fear-driven, or designed only for large enterprises. Our approach combines
+                    real-world security
+                    experience with tailored strategies that align with how growing businesses actually operate.
+                </p>
+
+                <div
+                    style="display: inline-block; padding: 3rem; background: var(--gradient-card); border-radius: var(--radius-xl); border: 2px solid rgba(0, 212, 255, 0.2); box-shadow: var(--shadow-lg);">
+                    <p style="font-size: 1.15rem; color: var(--text-muted); font-style: italic; margin: 0;">
+                        "We are <strong style="color: var(--cyber-teal);">too small to be a target</strong>"
+                        <br><br>
+                        <span style="color: var(--text-secondary);">— A common misconception. Cybersecurity incidents in
+                            SMBs rarely occur due to negligence.
+                            In most cases, they happen because organisations underestimate their exposure or are unaware
+                            of how modern attacks actually work.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Vision Section -->
+    <section style="position: relative;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Our Vision</h2>
+            </div>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem;">
+                <div class="reveal" style="text-align: center;">
+                    <img src="/Users/kritikaahuja/.gemini/antigravity/brain/bf69b96b-503e-4395-bab3-7b6881f54684/vision_future_cyber_1767171669350.png"
+                        alt="Our Vision"
+                        style="max-width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); margin-bottom: 2rem;">
+                </div>
+
+                <div class="reveal" style="display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="color: var(--cyber-blue); margin-bottom: 2rem; font-size: 1.8rem;">
+                        To create a safer digital ecosystem where growing businesses are no longer easy targets for
+                        cyber attackers.
+                    </h3>
+
+                    <p
+                        style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+                        We envision a future where cybersecurity is:
+                    </p>
+
+                    <ul style="list-style: none; padding: 0;">
+                        <li
+                            style="padding: 1rem 0; color: var(--text-secondary); border-bottom: 1px solid rgba(0, 212, 255, 0.1); display: flex; align-items: center; gap: 1rem;">
+                            <span style="color: var(--cyber-blue); font-size: 1.5rem;">✓</span>
+                            <span style="font-size: 1.1rem;"><strong style="color: var(--text-glow);">Proactive</strong>
+                                rather than reactive</span>
+                        </li>
+                        <li
+                            style="padding: 1rem 0; color: var(--text-secondary); border-bottom: 1px solid rgba(0, 212, 255, 0.1); display: flex; align-items: center; gap: 1rem;">
+                            <span style="color: var(--cyber-blue); font-size: 1.5rem;">✓</span>
+                            <span style="font-size: 1.1rem;"><strong
+                                    style="color: var(--text-glow);">Affordable</strong> rather than prohibitive</span>
+                        </li>
+                        <li
+                            style="padding: 1rem 0; color: var(--text-secondary); border-bottom: 1px solid rgba(0, 212, 255, 0.1); display: flex; align-items: center; gap: 1rem;">
+                            <span style="color: var(--cyber-blue); font-size: 1.5rem;">✓</span>
+                            <span style="font-size: 1.1rem;"><strong
+                                    style="color: var(--text-glow);">Understood</strong> rather than ignored</span>
+                        </li>
+                        <li
+                            style="padding: 1rem 0; color: var(--text-secondary); display: flex; align-items: center; gap: 1rem;">
+                            <span style="color: var(--cyber-blue); font-size: 1.5rem;">✓</span>
+                            <span style="font-size: 1.1rem;"><strong
+                                    style="color: var(--text-glow);">Integrated</strong> into business operations, not
+                                treated as an afterthought</span>
+                        </li>
+                    </ul>
+
+                    <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-top: 2rem;">
+                        By raising awareness and delivering meaningful protection, we strive to help businesses grow
+                        securely in a digital-first world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Our Approach</h2>
+                <p style="color: var(--text-muted); font-size: 1.2rem; margin-top: 1rem;">
+                    Clarity Before Complexity
+                </p>
+            </div>
+
+            <div class="reveal" style="max-width: 900px; margin: 0 auto; text-align: center; margin-bottom: 4rem;">
+                <p style="font-size: 1.2rem; line-height: 1.9; color: var(--text-secondary);">
+                    At HIQurate Ops, we focus on <span style="color: var(--cyber-blue); font-weight: 700;">clarity
+                        before complexity</span>.
+                    Effective security starts with understanding what needs protection, where the risks exist, and how
+                    attackers are most likely to exploit them.
+                </p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card reveal-stagger"
+                    style="background: var(--gradient-card); border-color: rgba(0, 212, 255, 0.3);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎓</div>
+                    <h3 style="color: var(--cyber-blue); font-size: 1.3rem; margin-bottom: 0.5rem;">Awareness &
+                        Education</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        Understanding real risks—not just theoretical ones
+                    </p>
+                </div>
+
+                <div class="stat-card reveal-stagger"
+                    style="background: var(--gradient-card); border-color: rgba(168, 85, 247, 0.3);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
+                    <h3 style="color: var(--cyber-purple); font-size: 1.3rem; margin-bottom: 0.5rem;">Early Risk
+                        Identification</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        Before threats turn into incidents
+                    </p>
+                </div>
+
+                <div class="stat-card reveal-stagger"
+                    style="background: var(--gradient-card); border-color: rgba(20, 184, 166, 0.3);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                    <h3 style="color: var(--cyber-teal); font-size: 1.3rem; margin-bottom: 0.5rem;">Tailored Strategies
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        Designed specifically for SME environments
+                    </p>
+                </div>
+
+                <div class="stat-card reveal-stagger"
+                    style="background: var(--gradient-card); border-color: rgba(99, 102, 241, 0.3);">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+                    <h3 style="color: var(--cyber-indigo); font-size: 1.3rem; margin-bottom: 0.5rem;">Cost-Effective
+                        Protection</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        Value without enterprise-level overhead
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;" class="reveal">
+                <p style="font-size: 1.2rem; color: var(--text-glow); max-width: 800px; margin: 0 auto;">
+                    We help organisations build resilience <strong>without overwhelming them</strong> with tools,
+                    jargon, or unnecessary expenses.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Cybersecurity Awareness</h2>
+                <p style="color: var(--text-muted); font-size: 1.2rem; margin-top: 1rem;">
+                    Understanding Modern Cyber Threats
+                </p>
+            </div>
+            <div class="video-container reveal">
+                <video autoplay muted loop playsinline
+                    poster="images/fstP8OPsEXeBaTckDUaf4wxMI1jhxzChd1YOwX9Vi7GQ08qvzaW1hK4ZeQ0T9kl1.jpeg">
+                    <source
+                        src="https://cdn.pixabay.com/vimeo/408921998/network-30169.mp4?width=1280&hash=f21f26e0fb3d4c05889dbd98b9e7c40d5f8bafbd"
+                        type="video/mp4">
+                </video>
+                <div class="video-overlay">
+                    <div class="video-overlay-content">
+                        <h3>The Reality of Cyber Threats</h3>
+                        <p>Cybersecurity incidents in small and medium businesses rarely occur due to negligence. They
+                            happen because organisations underestimate their exposure or are unaware of how modern
+                            attacks actually work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+        <div class="container">
+            <div style="background: var(--gradient-card); padding: 5rem 4rem; border-radius: var(--radius-xl); text-align: center; border: 2px solid rgba(0, 212, 255, 0.3); box-shadow: var(--shadow-xl), var(--glow-blue); backdrop-filter: blur(20px);"
+                class="reveal">
+                <div class="cert-badge" style="margin-bottom: 2rem;">🏆 ISO 27002:2022 Certified Auditors</div>
+                <h2 style="margin-bottom: 1.5rem; font-size: clamp(2rem, 4vw, 3rem);">Ready to Secure Your Business?
+                </h2>
+                <p
+                    style="color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Get audited by certified professionals. Start with a free security assessment and discover your
+                    vulnerabilities before attackers do.
+                </p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#contact" class="btn btn-primary">Get Free Assessment</a>
+                    <a href="#abc-framework" class="btn btn-outline">View ABC Framework</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - FUTURISTIC REDESIGN -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Secure Your Future Today</h2>
+                <p style="color: var(--text-muted); font-size: 1.2rem; margin-top: 1rem;">
+                    Our ISO 27002:2022 certified security experts are ready to assess your needs
+                </p>
+            </div>
+
+            <div class="contact-wrapper reveal">
+                <!-- Left Side - Info Panel -->
+                <div class="contact-info-panel">
+                    <div class="info-header">
+                        <div class="security-badge-large">
+                            <div class="badge-icon">🛡️</div>
+                            <div class="badge-text">
+                                <h3>Encrypted Communication</h3>
+                                <p>Your data is protected</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">⚡</div>
+                            <div class="stat-content">
+                                <div class="stat-value">&lt;24h</div>
+                                <div class="stat-label">Response Time</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🏆</div>
+                            <div class="stat-content">
+                                <div class="stat-value">ISO 27002</div>
+                                <div class="stat-label">Certified Auditors</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-methods">
+                        <h4 style="color: var(--cyber-blue); margin-bottom: 1.5rem; font-size: 1.3rem;">Direct Contact
+                        </h4>
+                        <div class="method-item">
+                            <div class="method-icon">📧</div>
+                            <div class="method-content">
+                                <div class="method-label">Email</div>
+                                <a href="mailto:SayHi@HIQurateOps.com">SayHi@HIQurateOps.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Enhanced Form -->
+                <div class="contact-form-panel">
+                    <form class="contact-form-modern" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name">Full Name *</label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">👤</span>
+                                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Email Address *</label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">📧</span>
+                                    <input type="email" id="email" name="email" required placeholder="john@company.com">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="phone">Phone Number</label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">📱</span>
+                                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="company">Company Name</label>
+                                <div class="input-wrapper">
+                                    <span class="input-icon">🏢</span>
+                                    <input type="text" id="company" name="company" placeholder="Your Company Ltd.">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="service">Service Interest *</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">🎯</span>
+                                <select id="service" name="service" required>
+                                    <option value="">Select your security need...</option>
+                                    <option value="assess">🔍 A - Attack Surface Snapshot (Assess)</option>
+                                    <option value="build">🔨 B - Baseline Security Review (Build)</option>
+                                    <option value="conquer">⚔️ C - Cyber 360° Defence (Conquer)</option>
+                                    <option value="custom">⚙️ Custom Security Solution</option>
+                                    <option value="audit">🏆 ISO 27002:2022 Audit</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="message">Security Requirements *</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon textarea-icon">💬</span>
+                                <textarea id="message" name="message" required
+                                    placeholder="Tell us about your security challenges, current infrastructure, and what you're looking to protect..."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <span class="btn-text">Send Secure Message</span>
+                            <span class="btn-icon">🔒</span>
+                        </button>
+
+                        <p class="form-disclaimer">
+                            <span class="disclaimer-icon">🔐</span>
+                            Your information is encrypted and will never be shared with third parties.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>HIQurate™ © 2025. All rights reserved.</strong></p>
+            <p style="margin-top: 1rem;">
+                <a href="mailto:SayHi@HIQurateOps.com">SayHi@HIQurateOps.com</a>
+            </p>
+            <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+                ISO 27002:2022 Certified Lead Auditors | Enterprise-Grade Cybersecurity for SMEs
+            </p>
+            <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+                Assess. Build. Conquer. — Practical, Transparent, Affordable Security
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Loading Animation
+        window.addEventListener('load', function () {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 3000); // Show for 3 seconds
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('✅ Thank you for contacting HIQurate Ops! Our certified security team will reach out within 24 hours to discuss your needs and schedule your free assessment.');
+            this.reset();
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all reveal elements
+        document.querySelectorAll('.reveal, .reveal-stagger, .stat-card, .feature-card, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Particle generation
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 40;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+
+            const size = Math.random() * 4 + 2;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.animationDelay = `${Math.random() * 15}s`;
+            particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
+
+            const colors = ['#00d4ff', '#a855f7', '#14b8a6'];
+            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+            particlesContainer.appendChild(particle);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Video lazy loading
+        const videos = document.querySelectorAll('video');
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.play();
+                } else {
+                    entry.target.pause();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        videos.forEach(video => {
+            videoObserver.observe(video);
+        });
+    </script>
+</body>
+
+</html>
