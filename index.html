@@ -384,50 +384,69 @@
         </div>
     </section>
 
-    <!-- Who We Are Section -->
-    <section id="who-we-are" style="background: var(--bg-secondary); position: relative; overflow: hidden;">
-        <div class="container">
+    <!-- Who We Are Section - FORENSIC REDESIGN -->
+    <section id="who-we-are">
+        <!-- Visual Background Elements (No Images) -->
+        <div class="forensic-bg-text">SECURITY</div>
+        <div class="forensic-scanner"></div>
+        <div class="forensic-grid"></div>
+
+        <div class="container" style="position: relative; z-index: 2;">
             <div class="section-header reveal">
                 <span class="section-subtitle">THE COMPANY</span>
                 <h2 class="section-main-title">Who We Are</h2>
             </div>
 
-            <div class="reveal" style="max-width: 900px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 1.2rem; line-height: 1.9; color: var(--text-secondary); margin-bottom: 2rem;">
-                    <strong style="color: var(--text-glow);">HIQurate Ops</strong> is a cybersecurity services company
-                    focused on
-                    protecting ambitious organizations in an increasingly hostile digital landscape. We work
-                    with
-                    enterprises that handle sensitive data but require enhanced visibility and expertise
-                    to defend against modern cyber threats.
-                </p>
-
-                <p style="font-size: 1.2rem; line-height: 1.9; color: var(--text-secondary); margin-bottom: 3rem;">
-                    We believe cybersecurity should be <span
-                        style="color: var(--cyber-blue); font-weight: 700;">practical, transparent, and
-                        authoritative</span>,
-                    not complicated, fear-driven, or designed only for the fortune 100. Our approach combines
-                    real-world security
-                    experience with tailored strategies that align with how modern organizations actually operate.
-                </p>
-
-                <div
-                    style="display: inline-block; padding: 3rem; background: var(--gradient-card); border-radius: var(--radius-xl); border: 2px solid rgba(0, 212, 255, 0.2); box-shadow: var(--shadow-lg);">
-                    <p style="font-size: 1.15rem; color: var(--text-muted); font-style: italic; margin: 0;">
-                        "We are <strong style="color: var(--cyber-teal);">not a significant target</strong>"
-                        <br><br>
-                        <span style="color: var(--text-secondary);">— A common misconception. Cybersecurity incidents
-                            rarely occur due to simple negligence.
-                            In most cases, they happen because organizations underestimate their exposure or are unaware
-                            of how sophisticated modern attacks actually work.</span>
+            <div class="who-we-are-content">
+                <div class="who-column reveal">
+                    <div class="content-tag">ESTABLISHED 2024</div>
+                    <p class="premium-lead">
+                        <strong style="color: var(--text-glow);">HIQurate Ops</strong> is an elite cybersecurity firm
+                        architected to protect ambitious organizations in a volatile digital era.
                     </p>
+                    <p class="standard-para">
+                        We bridge the critical gap between complex cyber threats and operational continuity.
+                        Our team works with enterprises that manage sensitive data assets but require the
+                        high-level visibility and specialized expertise to survive modern attacks.
+                    </p>
+                </div>
+
+                <div class="who-column reveal">
+                    <div class="concept-card">
+                        <div class="concept-header">
+                            <span class="concept-number">01</span>
+                            <h4>The Misconception</h4>
+                        </div>
+                        <div class="concept-body">
+                            <blockquote>"We are not a significant target."</blockquote>
+                            <p>
+                                Every organization is a node in the global supply chain.
+                                Breaches rarely happen due to simple negligence; they happen because organizations
+                                underestimate their digital footprint.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="concept-card" style="margin-top: 2rem;">
+                        <div class="concept-header">
+                            <span class="concept-number">02</span>
+                            <h4>The Approach</h4>
+                        </div>
+                        <div class="concept-body">
+                            <p>
+                                We believe security should be <span class="highlight-text">Authoritative &
+                                    Practical</span>.
+                                No fear-driven tactics. Just raw security experience aligned with your business logic.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Our Vision Section -->
-    <section style="position: relative;">
+    <section id="vision">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-subtitle">OUR VALUES</span>
@@ -437,8 +456,8 @@
             <div
                 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem;">
                 <div class="reveal" style="text-align: center;">
-                    <img src="images/vision_v2.png" alt="Our Vision"
-                        style="max-width: 100%; border-radius: var(--radius-xl); mix-blend-mode: screen; filter: brightness(1.2); margin-bottom: 2rem;">
+                    <img src="images/vision_v3.png" alt="Our Vision"
+                        style="max-width: 100%; border-radius: var(--radius-xl); mix-blend-mode: screen; filter: brightness(1.2) contrast(1.1); margin-bottom: 2rem;">
                 </div>
 
                 <div class="reveal" style="display: flex; flex-direction: column; justify-content: center;">
@@ -453,30 +472,25 @@
                     </p>
 
                     <ul style="list-style: none; padding: 0;">
-                        <li
-                            style="padding: 1rem 0; color: var(--text-secondary); border-bottom: 1px solid rgba(0, 212, 255, 0.1); display: flex; align-items: center; gap: 1rem;">
-                            <span style="color: var(--cyber-blue); font-size: 1.5rem;">✓</span>
+                        <li class="premium-check">
+                            <span class="check-icon">🛡️</span>
                             <span style="font-size: 1.1rem;"><strong style="color: var(--text-glow);">Proactive</strong>
                                 rather than reactive</span>
                         </li>
-                        <li
-                            style="padding: 1rem 0; color: var(--text-secondary); border-bottom: 1px solid rgba(0, 212, 255, 0.1); display: flex; align-items: center; gap: 1rem;">
-                            <span style="color: var(--cyber-blue); font-size: 1.5rem;">✓</span>
+                        <li class="premium-check">
+                            <span class="check-icon">💎</span>
                             <span style="font-size: 1.1rem;"><strong
                                     style="color: var(--text-glow);">Affordable</strong> rather than prohibitive</span>
                         </li>
-                        <li
-                            style="padding: 1rem 0; color: var(--text-secondary); border-bottom: 1px solid rgba(0, 212, 255, 0.1); display: flex; align-items: center; gap: 1rem;">
-                            <span style="color: var(--cyber-blue); font-size: 1.5rem;">✓</span>
+                        <li class="premium-check">
+                            <span class="check-icon">🧠</span>
                             <span style="font-size: 1.1rem;"><strong
                                     style="color: var(--text-glow);">Understood</strong> rather than ignored</span>
                         </li>
-                        <li
-                            style="padding: 1rem 0; color: var(--text-secondary); display: flex; align-items: center; gap: 1rem;">
-                            <span style="color: var(--cyber-blue); font-size: 1.5rem;">✓</span>
+                        <li class="premium-check">
+                            <span class="check-icon">⚡</span>
                             <span style="font-size: 1.1rem;"><strong
-                                    style="color: var(--text-glow);">Integrated</strong> into business operations, not
-                                treated as an afterthought</span>
+                                    style="color: var(--text-glow);">Integrated</strong> into business operations</span>
                         </li>
                     </ul>
 
@@ -490,7 +504,7 @@
     </section>
 
     <!-- Our Approach Section -->
-    <section style="background: var(--bg-secondary);">
+    <section id="our-approach">
         <div class="container">
             <div class="section-title reveal">
                 <h2>Our Approach</h2>
@@ -588,7 +602,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section>
+    <section id="final-cta">
         <div class="container">
             <div style="background: var(--gradient-card); padding: 5rem 4rem; border-radius: var(--radius-xl); text-align: center; border: 2px solid rgba(0, 212, 255, 0.3); box-shadow: var(--shadow-xl), var(--glow-blue); backdrop-filter: blur(20px);"
                 class="reveal">
