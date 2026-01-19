@@ -113,7 +113,7 @@
         <div class="loader-progress-container">
             <div class="loader-progress-bar"></div>
         </div>
-        <div class="loader-status">Initializing Secure Protocols...</div>
+        <!-- loader status removed -->
     </div>
 
     <!-- Matrix Rain Effect -->
@@ -135,18 +135,27 @@
             <nav>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
                 <ul id="navMenu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#threat-intel">Threats</a></li>
-                    <li><a href="#what-we-do">Services</a></li>
-                    <li><a href="#abc-framework">ABC Framework</a></li>
-                    <li><a href="#our-approach">Approach</a></li>
-                    <li><a href="#who-we-are">About</a></li>
-                    <li><a href="#vision">Vision</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="threats.html">Threats</a></li>
+                    <li><a href="capabilities.html">Capabilities</a></li>
+                    <li><a href="abc.html">ABC Framework</a></li>
+                    <li><a href="about.html#approach">Approach</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <!-- Quick Jump Bar -->
+    <nav class="quick-jump" aria-label="Quick section navigation">
+        <a href="index.html#home">Home</a>
+        <a href="threats.html">Threats</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="abc.html">ABC</a>
+        <a href="about.html#approach">Approach</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
 
     <!-- Hero Section with Redesigned Visuals -->
     <section class="hero" id="home">
@@ -191,6 +200,36 @@
         </div>
     </section>
 
+    <!-- Path Selector -->
+    <section class="path-selector">
+        <div class="container-wide path-grid">
+            <div class="path-card">
+                <div class="path-label">Quick start</div>
+                <h3>Assess</h3>
+                <p>See your attack surface and top risks in minutes.</p>
+                <a href="#abc-framework" class="btn btn-outline btn-sm">Jump to ABC</a>
+            </div>
+            <div class="path-card">
+                <div class="path-label">Build</div>
+                <h3>Capabilities</h3>
+                <p>Review core services and delivery outcomes.</p>
+                <a href="#what-we-do" class="btn btn-outline btn-sm">View services</a>
+            </div>
+            <div class="path-card">
+                <div class="path-label">Decide</div>
+                <h3>Approach</h3>
+                <p>Understand how we plan, prioritize, and execute.</p>
+                <a href="#our-approach" class="btn btn-outline btn-sm">See approach</a>
+            </div>
+            <div class="path-card">
+                <div class="path-label">Talk</div>
+                <h3>Contact</h3>
+                <p>Book a free assessment with a lead auditor.</p>
+                <a href="#contact" class="btn btn-primary btn-sm">Talk to us</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Threat Intelligence Showcase -->
     <section id="threat-intel" class="threat-section">
         <div class="container-wide">
@@ -199,10 +238,8 @@
                     <span class="threat-eyebrow">THREAT LANDSCAPE</span>
                     <h2 class="threat-headline">The <span class="highlight-word">Reality</span> of Cyber Threats</h2>
                     <p class="threat-desc">
-                        Cybersecurity incidents rarely occur due to <span class="pain-word">negligence</span>.
-                        They happen because organisations <span class="pain-word">underestimate</span> their exposure or
-                        are
-                        <span class="pain-word">unaware</span> of how modern attacks actually work.
+                        Most breaches aren’t “bad luck” — they come from blind spots and slow detection. Close the gaps
+                        before attackers find them.
                     </p>
                     <div class="threat-cta">
                         <a href="#contact" class="btn btn-primary">Assess Your Risk</a>
@@ -224,15 +261,14 @@
                         </div>
 
                         <div class="threat-stat">
-                            <span class="stat-value">204</span>
-                            <span class="stat-label">days average time to <span class="pain-word">detect a
-                                    breach</span></span>
-                        </div>
-
-                        <div class="threat-stat">
                             <span class="stat-value">89%</span>
                             <span class="stat-label">of <span class="highlight-word">boards</span> classify
                                 cybersecurity as <span class="highlight-word">top strategic priority</span></span>
+                        </div>
+
+                        <div class="threat-stat">
+                            <span class="stat-value">204</span>
+                            <span class="stat-label"><span class="pain-word">days</span> average time to <span class="pain-word">detect a breach</span></span>
                         </div>
                     </div>
                 </div>
@@ -334,6 +370,22 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Proof Strip -->
+            <div class="proof-strip reveal">
+                <div class="proof-item">
+                    <div class="proof-label">ISO 27002:2022</div>
+                    <div class="proof-value">Certified Auditors</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-label">&lt;24h</div>
+                    <div class="proof-value">Response SLA</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-label">Zero Criticals</div>
+                    <div class="proof-value">Post-Assessment Track</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -357,51 +409,60 @@
 
             <div class="abc-stages-row">
                 <!-- A - Assess -->
-                <div class="abc-card reveal-stagger">
-                    <div class="abc-card-header">
+                <div class="abc-card reveal-stagger accordion-collapsible">
+                    <div class="abc-card-header accordion-toggle">
                         <span class="abc-letter">A</span>
                         <span class="abc-phase">Phase 01</span>
+                        <span class="accordion-icon">+</span>
                     </div>
-                    <h3 class="abc-card-title">Assess</h3>
-                    <p class="abc-card-subtitle">Attack Surface Snapshot</p>
-                    <ul class="abc-card-features">
-                        <li>External risk scans</li>
-                        <li>Vulnerability mapping</li>
-                        <li>Actionable insights</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline btn-sm">Start Assessment</a>
+                    <div class="abc-card-body accordion-body">
+                        <h3 class="abc-card-title">Assess</h3>
+                        <p class="abc-card-subtitle">Attack Surface Snapshot</p>
+                        <ul class="abc-card-features">
+                            <li>External risk scans</li>
+                            <li>Vulnerability mapping</li>
+                            <li>Actionable insights</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline btn-sm">Start Assessment</a>
+                    </div>
                 </div>
 
                 <!-- B - Build -->
-                <div class="abc-card reveal-stagger">
-                    <div class="abc-card-header">
+                <div class="abc-card reveal-stagger accordion-collapsible">
+                    <div class="abc-card-header accordion-toggle">
                         <span class="abc-letter">B</span>
                         <span class="abc-phase">Phase 02</span>
+                        <span class="accordion-icon">+</span>
                     </div>
-                    <h3 class="abc-card-title">Build</h3>
-                    <p class="abc-card-subtitle">Baseline Security Review</p>
-                    <ul class="abc-card-features">
-                        <li>ISO/SOC2 Assessment</li>
-                        <li>Security roadmap</li>
-                        <li>Staff training</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline btn-sm">Build Strategy</a>
+                    <div class="abc-card-body accordion-body">
+                        <h3 class="abc-card-title">Build</h3>
+                        <p class="abc-card-subtitle">Baseline Security Review</p>
+                        <ul class="abc-card-features">
+                            <li>ISO/SOC2 Assessment</li>
+                            <li>Security roadmap</li>
+                            <li>Staff training</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline btn-sm">Build Strategy</a>
+                    </div>
                 </div>
 
                 <!-- C - Conquer -->
-                <div class="abc-card reveal-stagger">
-                    <div class="abc-card-header">
+                <div class="abc-card reveal-stagger accordion-collapsible">
+                    <div class="abc-card-header accordion-toggle">
                         <span class="abc-letter">C</span>
                         <span class="abc-phase">Phase 03</span>
+                        <span class="accordion-icon">+</span>
                     </div>
-                    <h3 class="abc-card-title">Conquer</h3>
-                    <p class="abc-card-subtitle">Cyber 360° Defence</p>
-                    <ul class="abc-card-features">
-                        <li>24/7 SOC Monitoring</li>
-                        <li>Incident Containment</li>
-                        <li>Threat Hunting</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline btn-sm">Secure Assets</a>
+                    <div class="abc-card-body accordion-body">
+                        <h3 class="abc-card-title">Conquer</h3>
+                        <p class="abc-card-subtitle">Cyber 360° Defence</p>
+                        <ul class="abc-card-features">
+                            <li>24/7 SOC Monitoring</li>
+                            <li>Incident Containment</li>
+                            <li>Threat Hunting</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline btn-sm">Secure Assets</a>
+                    </div>
                 </div>
             </div>
             <div class="abc-cta reveal" style="text-align: center; margin-top: 3rem;">
@@ -411,9 +472,9 @@
         </div>
     </section>
 
-    <!-- Who We Are Section - FORENSIC REDESIGN -->
+    <!-- The Company Section (Who We Are + Vision) -->
     <section id="who-we-are" class="premium-highlight-section">
-        <!-- Visual Background Elements (No Images) -->
+        <!-- Visual Background Elements -->
         <div class="forensic-bg-text">SECURITY</div>
         <div class="forensic-scanner"></div>
         <div class="forensic-grid"></div>
@@ -422,7 +483,7 @@
         <div class="container" style="position: relative; z-index: 2;">
             <div class="section-header reveal">
                 <span class="section-subtitle">THE COMPANY</span>
-                <h2 class="section-main-title glow-text">Who We Are</h2>
+                <h2 class="section-main-title glow-text">Who We Are & Our Vision</h2>
             </div>
 
             <div class="who-we-are-content">
@@ -430,12 +491,13 @@
                     <div class="content-tag">ESTABLISHED 2024</div>
                     <p class="premium-lead">
                         <strong style="color: var(--text-glow);">HIQurate Ops</strong> is an elite cybersecurity firm
-                        architected to protect ambitious organizations in a volatile digital era.
+                        architected to protect ambitious organizations.
                     </p>
-                    <p class="standard-para">
-                        We bridge the critical gap between complex cyber threats and operational continuity.
-                        Our team works with enterprises that manage sensitive data assets but require the
-                        high-level visibility and specialized expertise to survive modern attacks.
+                    <p class="standard-para" style="margin-bottom: 2rem;">
+                        To create a <span class="highlight-word" style="color: var(--cyber-blue);">robust digital
+                            ecosystem</span> where organizations are
+                        no longer <span class="pain-word">easy targets</span>. We bridge the gap between complex threats
+                        and operational continuity.
                     </p>
                 </div>
 
@@ -443,88 +505,36 @@
                     <div class="concept-card">
                         <div class="concept-header">
                             <span class="concept-number">01</span>
-                            <h4>The Misconception</h4>
-                        </div>
-                        <div class="concept-body">
-                            <blockquote>"We are not a significant target."</blockquote>
-                            <p>
-                                Every organization is a node in the global supply chain.
-                                Breaches rarely happen due to simple negligence; they happen because organizations
-                                underestimate their digital footprint.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="concept-card" style="margin-top: 2rem;">
-                        <div class="concept-header">
-                            <span class="concept-number">02</span>
                             <h4>The Approach</h4>
                         </div>
                         <div class="concept-body">
                             <p>
-                                We believe security should be <span class="highlight-text">Authoritative &
-                                    Practical</span>.
-                                No fear-driven tactics. Just raw security experience aligned with your business logic.
+                                Authoritative & Practical security. No fear-driven tactics. Just raw experience aligned
+                                with your business logic.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Our Vision Section -->
-    <section id="vision" class="premium-highlight-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-subtitle">OUR VALUES</span>
-                <h2 class="section-main-title glow-text">Our Vision</h2>
-            </div>
-
-            <div class="vision-content">
-                <div class="vision-statement reveal">
-                    <p class="vision-lead">
-                        To create a <span class="highlight-word">robust digital ecosystem</span> where organizations are
-                        no longer
-                        <span class="pain-word">easy targets</span> for cyber attackers.
-                    </p>
-                </div>
-
-                <div class="vision-grid reveal">
-                    <div class="vision-intro">
-                        <h3>We envision a future where cybersecurity is:</h3>
+            <div class="vision-grid reveal" style="margin-top: 4rem;">
+                <div class="vision-pillars">
+                    <div class="vision-pillar">
+                        <span class="pillar-keyword">Proactive</span>
+                        <span class="pillar-contrast">not <span class="pain-word">reactive</span></span>
                     </div>
-
-                    <div class="vision-pillars">
-                        <div class="vision-pillar">
-                            <span class="pillar-keyword">Proactive</span>
-                            <span class="pillar-contrast">rather than <span class="pain-word">reactive</span></span>
-                        </div>
-
-                        <div class="vision-pillar">
-                            <span class="pillar-keyword">Affordable</span>
-                            <span class="pillar-contrast">rather than <span class="pain-word">prohibitive</span></span>
-                        </div>
-
-                        <div class="vision-pillar">
-                            <span class="pillar-keyword">Understood</span>
-                            <span class="pillar-contrast">rather than <span class="pain-word">ignored</span></span>
-                        </div>
-
-                        <div class="vision-pillar">
-                            <span class="pillar-keyword">Integrated</span>
-                            <span class="pillar-contrast">into <span class="highlight-word">business
-                                    operations</span></span>
-                        </div>
+                    <div class="vision-pillar">
+                        <span class="pillar-keyword">Affordable</span>
+                        <span class="pillar-contrast">not <span class="pain-word">prohibitive</span></span>
                     </div>
-                </div>
-
-                <div class="vision-closing reveal">
-                    <p>
-                        By raising <span class="highlight-word">awareness</span> and delivering <span
-                            class="highlight-word">meaningful protection</span>,
-                        we strive to help businesses grow securely in a digital-first world.
-                    </p>
+                    <div class="vision-pillar">
+                        <span class="pillar-keyword">Understood</span>
+                        <span class="pillar-contrast">not <span class="pain-word">ignored</span></span>
+                    </div>
+                    <div class="vision-pillar">
+                        <span class="pillar-keyword">Integrated</span>
+                        <span class="pillar-contrast">into <span class="highlight-word">ops</span></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -554,32 +564,48 @@
                 </div>
 
                 <div class="approach-pillars">
-                    <div class="approach-pillar reveal-stagger">
-                        <span class="pillar-number">01</span>
-                        <h4 class="pillar-title">Awareness & Education</h4>
-                        <p class="pillar-desc">Understanding <span class="highlight-word">real risks</span>—not just
-                            theoretical ones</p>
+                    <div class="approach-pillar reveal-stagger accordion-collapsible">
+                        <div class="approach-pillar-header accordion-toggle">
+                            <span class="pillar-number">01</span>
+                            <h4 class="pillar-title">Awareness & Education</h4>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <p class="pillar-desc">Focus on real risks, not noise.</p>
+                        </div>
                     </div>
 
-                    <div class="approach-pillar reveal-stagger">
-                        <span class="pillar-number">02</span>
-                        <h4 class="pillar-title">Early Risk Identification</h4>
-                        <p class="pillar-desc">Before <span class="pain-word">threats</span> turn into <span
-                                class="pain-word">incidents</span></p>
+                    <div class="approach-pillar reveal-stagger accordion-collapsible">
+                        <div class="approach-pillar-header accordion-toggle">
+                            <span class="pillar-number">02</span>
+                            <h4 class="pillar-title">Early Risk Identification</h4>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <p class="pillar-desc">Fix issues before they become incidents.</p>
+                        </div>
                     </div>
 
-                    <div class="approach-pillar reveal-stagger">
-                        <span class="pillar-number">03</span>
-                        <h4 class="pillar-title">Tailored Strategies</h4>
-                        <p class="pillar-desc">Designed specifically for <span class="highlight-word">high-growth
-                                environments</span></p>
+                    <div class="approach-pillar reveal-stagger accordion-collapsible">
+                        <div class="approach-pillar-header accordion-toggle">
+                            <span class="pillar-number">03</span>
+                            <h4 class="pillar-title">Tailored Strategies</h4>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <p class="pillar-desc">Plans that match your environment and pace.</p>
+                        </div>
                     </div>
 
-                    <div class="approach-pillar reveal-stagger">
-                        <span class="pillar-number">04</span>
-                        <h4 class="pillar-title">Cost-Effective Protection</h4>
-                        <p class="pillar-desc">Value without <span class="pain-word">enterprise-level overhead</span>
-                        </p>
+                    <div class="approach-pillar reveal-stagger accordion-collapsible">
+                        <div class="approach-pillar-header accordion-toggle">
+                            <span class="pillar-number">04</span>
+                            <h4 class="pillar-title">Cost-Effective Protection</h4>
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <p class="pillar-desc">Value without enterprise overhead.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -595,29 +621,23 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section id="final-cta">
+    <!-- Contact Section - FUTURISTIC REDESIGN -->
+    <section id="contact" class="contact-section">
         <div class="container">
-            <div class="cta-premium-box reveal">
-                <div class="cert-badge" style="margin-bottom: 2rem;">ISO 27002:2022 Certified Auditors</div>
-                <h2 style="margin-bottom: 1.5rem; font-size: clamp(2rem, 4vw, 3rem);">Ready to Secure Your Business?
+            <div class="cta-premium-box contact-cta-inline reveal">
+                <div class="cert-badge" style="margin-bottom: 1rem;">ISO 27002:2022 Certified Auditors</div>
+                <h2 style="margin-bottom: 1rem; font-size: clamp(2rem, 4vw, 3rem);">Ready to Secure Your Business?
                 </h2>
-                <p
-                    style="color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.05rem; max-width: 760px; margin-left: auto; margin-right: auto;">
                     Get audited by certified professionals. Start with a free security assessment and discover your
                     vulnerabilities before attackers do.
                 </p>
-                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="#contact" class="btn btn-primary">Get Free Assessment</a>
                     <a href="#abc-framework" class="btn btn-outline">View ABC Framework</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section - FUTURISTIC REDESIGN -->
-    <section id="contact" class="contact-section">
-        <div class="container">
             <div class="section-header reveal">
                 <span class="section-subtitle">GET COMMENCED</span>
                 <h2 class="section-main-title">Secure Your Future</h2>
@@ -753,13 +773,21 @@
         </div>
     </footer>
 
+    <!-- Lightbox -->
+    <div class="lightbox-backdrop" id="lightbox">
+        <img src="" alt="Preview" class="lightbox-image" id="lightboxImage">
+    </div>
+
     <!-- Scripts -->
     <script>
         // Loading Animation
         window.addEventListener('load', function () {
+            const loader = document.getElementById('loader');
+            if (!loader) return;
+            loader.classList.add('hidden');
             setTimeout(() => {
-                document.getElementById('loader').classList.add('hidden');
-            }, 3000); // Show for 3 seconds
+                loader.style.display = 'none';
+            }, 600);
         });
 
         // Mobile menu toggle
@@ -906,6 +934,85 @@
         videos.forEach(video => {
             videoObserver.observe(video);
         });
+
+        // Lightbox for visuals (ABC image)
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const abcImg = document.querySelector('.abc-main-img');
+        if (abcImg && lightbox && lightboxImage) {
+            abcImg.style.cursor = 'zoom-in';
+            abcImg.addEventListener('click', () => {
+                lightboxImage.src = abcImg.src;
+                lightbox.classList.add('active');
+            });
+            lightbox.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+            });
+        }
+
+        // Mobile accordions for ABC and Approach
+        const accordions = document.querySelectorAll('.accordion-collapsible');
+        const isMobile = () => window.innerWidth <= 900;
+
+        accordions.forEach(card => {
+            const toggle = card.querySelector('.accordion-toggle');
+            const body = card.querySelector('.accordion-body');
+            if (!toggle || !body) return;
+
+            const close = () => {
+                card.classList.remove('open');
+                body.style.maxHeight = null;
+                const icon = card.querySelector('.accordion-icon');
+                if (icon) icon.textContent = '+';
+            };
+
+            const open = () => {
+                card.classList.add('open');
+                body.style.maxHeight = body.scrollHeight + 'px';
+                const icon = card.querySelector('.accordion-icon');
+                if (icon) icon.textContent = '–';
+            };
+
+            // default closed on mobile, open on desktop
+            const syncState = () => {
+                if (isMobile()) {
+                    close();
+                } else {
+                    card.classList.add('open');
+                    body.style.maxHeight = 'none';
+                    const icon = card.querySelector('.accordion-icon');
+                    if (icon) icon.textContent = '';
+                }
+            };
+
+            syncState();
+
+            toggle.addEventListener('click', () => {
+                if (!isMobile()) return;
+                if (card.classList.contains('open')) {
+                    close();
+                } else {
+                    closeAllInGroup(card);
+                    open();
+                }
+            });
+
+            window.addEventListener('resize', syncState);
+        });
+
+        function closeAllInGroup(currentCard) {
+            accordions.forEach(card => {
+                if (card === currentCard) return;
+                if (!card.classList.contains('open')) return;
+                const body = card.querySelector('.accordion-body');
+                if (body) {
+                    card.classList.remove('open');
+                    body.style.maxHeight = null;
+                    const icon = card.querySelector('.accordion-icon');
+                    if (icon) icon.textContent = '+';
+                }
+            });
+        }
     </script>
 </body>
 

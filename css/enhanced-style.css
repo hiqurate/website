@@ -45,7 +45,7 @@
     --font-mono: 'Fira Code', 'Courier New', monospace;
 
     /* Spacing */
-    --section-padding: 120px 20px;
+    --section-padding: 80px 20px;
     --container-max-width: 1400px;
 
     /* Shadows & Glows - Cohesive Cyan */
@@ -133,6 +133,79 @@ body::after {
     z-index: 0;
     pointer-events: none;
     opacity: 0.3;
+}
+
+/* ============================================
+   GLOBAL LOADER (shared across pages)
+   ============================================ */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #0f1520;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+}
+
+#loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#loader .loader-status {
+    display: none !important;
+}
+
+.loader-logo {
+    width: 120px;
+    margin-bottom: 4rem;
+    animation: pulse 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.4));
+}
+
+.loader-progress-container {
+    width: 320px;
+    height: 2px;
+    background: rgba(0, 240, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.loader-progress-bar {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--cyber-blue);
+    box-shadow: 0 0 20px var(--cyber-blue);
+    animation: progressMove 2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.loader-status {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--cyber-blue);
+    margin-top: 1.5rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    display: none !important;
+}
+
+@keyframes progressMove {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
 }
 
 /* ============================================
@@ -364,7 +437,7 @@ nav a:hover::after {
 .hero {
     background: var(--bg-deepest);
     color: var(--text-primary);
-    padding: 180px 20px 100px;
+    padding: 140px 20px 80px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -409,7 +482,7 @@ nav a:hover::after {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
     animation: fadeInUp 1s ease-out 0.2s both;
 }
@@ -489,7 +562,7 @@ nav a:hover::after {
     font-size: 1.4rem;
     color: var(--text-secondary);
     max-width: 750px;
-    margin: 0 auto 3.5rem;
+    margin: 0 auto 2rem;
     line-height: 1.6;
     animation: fadeInUp 1s ease-out 0.4s both;
 }
@@ -572,7 +645,7 @@ nav a:hover::after {
    ============================================ */
 .video-section {
     position: relative;
-    padding: 120px 20px;
+    padding: 80px 20px;
     overflow: hidden;
     background: var(--bg-deep);
 }
@@ -669,7 +742,7 @@ nav a:hover::after {
 
 .cta-premium-box {
     background: var(--gradient-card);
-    padding: 5rem 4rem;
+    padding: 4rem 3rem;
     border-radius: var(--radius-xl);
     text-align: center;
     border: 2px solid rgba(0, 212, 255, 0.25);
@@ -730,7 +803,7 @@ section {
 }
 
 #what-we-do .capabilities-grid {
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.75rem;
@@ -786,7 +859,7 @@ section {
 #what-we-do .cap-content {
     position: relative;
     z-index: 2;
-    padding: 2.25rem 2rem;
+    padding: 1.5rem 1.75rem;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -889,6 +962,53 @@ section {
     font-weight: 900;
 }
 
+/* Proof strip */
+.proof-strip {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+}
+
+.proof-item {
+    padding: 1.2rem 1.4rem;
+    border: 1px solid rgba(126, 184, 218, 0.2);
+    border-radius: var(--radius-lg);
+    background: rgba(15, 20, 35, 0.7);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+}
+
+.proof-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(126, 184, 218, 0.08), transparent);
+    transform: translateX(-120%);
+    transition: transform 0.8s ease;
+}
+
+.proof-item:hover::after {
+    transform: translateX(120%);
+}
+
+.proof-label {
+    font-family: var(--font-mono);
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: var(--cyber-primary);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.proof-value {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #fff;
+}
+
 @media (max-width: 1200px) {
     #what-we-do .capabilities-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -907,6 +1027,7 @@ section {
 
 /* Respect accessibility preferences */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -1195,7 +1316,7 @@ section {
     background: linear-gradient(145deg, rgba(15, 20, 35, 0.8) 0%, rgba(10, 15, 25, 0.9) 100%);
     border: 1px solid rgba(0, 240, 255, 0.15);
     border-radius: var(--radius-xl);
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -1290,7 +1411,7 @@ section {
     background: linear-gradient(145deg, rgba(15, 20, 35, 0.8) 0%, rgba(10, 15, 25, 0.9) 100%);
     border: 1px solid rgba(0, 240, 255, 0.1);
     border-radius: var(--radius-xl);
-    padding: 2.5rem 1.5rem;
+    padding: 1.75rem 1.25rem;
     text-align: left;
     transition: all 0.4s ease;
     position: relative;
@@ -1489,7 +1610,7 @@ section {
     background: linear-gradient(145deg, rgba(20, 25, 40, 0.9) 0%, rgba(15, 20, 35, 0.95) 100%);
     border: 1px solid rgba(255, 107, 107, 0.15);
     border-radius: var(--radius-xl);
-    padding: 2rem;
+    padding: 1.5rem;
     transition: all 0.4s ease;
     text-align: center;
 }
@@ -1561,18 +1682,7 @@ section {
 }
 
 #final-cta {
-    background: linear-gradient(180deg, var(--bg-deepest), var(--bg-primary));
-}
-
-#final-cta::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%237eb8da' fill-opacity='0.02'/%3E%3C/svg%3E");
-    pointer-events: none;
+    background: var(--bg-deep);
 }
 
 /* Premium Checkmarks in Vision */
@@ -1602,10 +1712,9 @@ section {
 }
 
 .contact-section {
-    background: linear-gradient(135deg, var(--bg-deep) 0%, var(--bg-primary) 100%);
+    background: var(--bg-deep);
     position: relative;
-    padding-bottom: 0;
-    /* Adjust to minimize gap with footer */
+    padding-bottom: 80px;
 }
 
 .contact-section::before {
@@ -1620,7 +1729,7 @@ section {
 footer {
     background: var(--bg-deepest);
     color: var(--text-primary);
-    padding: 5rem 20px;
+    padding: 3rem 20px;
     text-align: center;
     border-top: 1px solid rgba(126, 184, 218, 0.2);
     position: relative;
@@ -1696,7 +1805,7 @@ footer::before {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     position: relative;
     z-index: 10;
     width: 100%;
@@ -2716,7 +2825,7 @@ section {
 }
 
 footer {
-    padding: 2rem 20px;
+    padding: 2rem 20px 4rem 20px;
     border-top: 1px solid rgba(126, 184, 218, 0.1);
 }
 
@@ -2728,6 +2837,187 @@ footer {
     right: 0;
     bottom: 0;
     background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+}
+
+/* ============================================
+   QUICK JUMP BAR & PATH SELECTOR
+   ============================================ */
+.quick-jump {
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    display: none; /* hide on desktop to avoid duplicate bars */
+    gap: 0.35rem;
+    padding: 0.35rem 0.6rem;
+    background: rgba(10, 15, 25, 0.85);
+    border: 1px solid rgba(126, 184, 218, 0.2);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+    z-index: 1200;
+    backdrop-filter: blur(12px);
+}
+
+.quick-jump a {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    padding: 0.35rem 0.7rem;
+    border-radius: var(--radius-full);
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.quick-jump a:hover {
+    color: var(--text-glow);
+    border-color: rgba(126, 184, 218, 0.25);
+    box-shadow: var(--glow-blue);
+}
+
+.path-selector {
+    background: var(--bg-deep);
+}
+
+.path-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.path-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(126, 184, 218, 0.2);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.path-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--cyber-blue);
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.path-card h3 {
+    margin-bottom: 0.25rem;
+}
+
+.path-card p {
+    margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   ACCORDION (MOBILE) FOR ABC & APPROACH
+   ============================================ */
+.accordion-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+}
+
+.accordion-icon {
+    margin-left: auto;
+    font-weight: 800;
+    color: var(--cyber-blue);
+}
+
+.abc-card-body,
+.approach-pillar .accordion-body {
+    transition: max-height 0.35s ease;
+}
+
+.approach-pillar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.approach-pillar .accordion-body {
+    margin-top: 0.4rem;
+}
+
+.accordion-collapsible.open .accordion-icon {
+    color: var(--cyber-purple);
+}
+
+@media (max-width: 900px) {
+    .quick-jump {
+        display: flex;
+    }
+
+    .quick-jump {
+        top: auto;
+        bottom: 18px;
+        right: 12px;
+        left: 12px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .accordion-body {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .accordion-collapsible.open .accordion-body {
+        max-height: 1200px;
+    }
+
+    .accordion-icon {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 901px) {
+    .accordion-icon {
+        display: none;
+    }
+    .accordion-body {
+        max-height: none !important;
+    }
+}
+
+/* ============================================
+   CONTACT CTA INLINE
+   ============================================ */
+.contact-cta-inline {
+    margin-bottom: 2.5rem;
+}
+
+/* Tabs */
+.tab-button.btn-primary {
+    color: #0b1020;
+}
+
+/* Lightbox */
+.lightbox-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    padding: 1rem;
+}
+
+.lightbox-backdrop.active {
+    display: flex;
+}
+
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    object-fit: contain;
 }
 
 .contact-form {
