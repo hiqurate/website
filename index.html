@@ -138,6 +138,9 @@
                     <li><a href="#what-we-do">Services</a></li>
                     <li><a href="#abc-framework">ABC Framework</a></li>
                     <li><a href="#who-we-are">About</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#our-approach">Approach</a></li>
+                    <li><a href="#threat-intel">Threats</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -189,74 +192,102 @@
 
     <!-- What We Do Section -->
     <section id="what-we-do" style="background: var(--bg-deep);">
-        <div class="container">
+        <div class="container-wide">
             <div class="section-header reveal">
                 <span class="section-subtitle">OUR CAPABILITIES</span>
-                <h2 class="section-main-title">What We Do</h2>
+                <h2 class="section-main-title glow-text">What We Do</h2>
                 <p class="section-description-text">
                     Strategic cybersecurity solutions tailored for organizations handling sensitive data.
                     We bridge the gap between complex digital threats and business continuity.
                 </p>
             </div>
 
-            <div class="features-grid">
+            <div class="features-grid flip-cards-container">
                 <!-- Risk Assessment -->
                 <div class="service-card reveal-stagger">
                     <div class="service-card-inner">
-                        <div class="service-icon-wrapper">
-                            <img src="images/icon_risk_clean.png" alt="Risk Assessment Icon">
+                        <div class="service-card-front">
+                            <div class="service-tag">Audit & Analysis</div>
+                            <div class="service-icon-wrapper">
+                                <img src="images/icon_risk_clean.png" alt="Risk Assessment Icon">
+                            </div>
+                            <h3 class="service-title">Cyber Risk & Resilience Assessment</h3>
                         </div>
-                        <h3 class="service-title">Cyber Risk & Resilience Assessment</h3>
-                        <p class="service-description">
-                            Comprehensive security audits to identify critical vulnerabilities.
-                            Actionable roadmaps to harden your infrastructure and ensure
-                            long-term resilience against evolving digital threats.
-                        </p>
+                        <div class="service-card-back">
+                            <h4 class="back-title">Cyber Risk & Resilience</h4>
+                            <ul class="back-features">
+                                <li>Vulnerability Scans</li>
+                                <li>GAP Analysis</li>
+                                <li>ISO Audit Prep</li>
+                                <li>Strategic Roadmap</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Threat Protection -->
                 <div class="service-card reveal-stagger">
                     <div class="service-card-inner">
-                        <div class="service-icon-wrapper">
-                            <img src="images/icon_threat_clean.png" alt="Threat Protection Icon">
+                        <div class="service-card-front">
+                            <div class="service-tag">Active Defense</div>
+                            <div class="service-icon-wrapper">
+                                <img src="images/icon_threat_clean.png" alt="Threat Protection Icon">
+                            </div>
+                            <h3 class="service-title">Advanced Threat Protection Plans</h3>
                         </div>
-                        <h3 class="service-title">Advanced Threat Protection Plans</h3>
-                        <p class="service-description">
-                            Proactive detection and mitigation strategies. We identify and
-                            neutralize threats before they impact your operations,
-                            maintaining a lean and secure digital footprint.
-                        </p>
+                        <div class="service-card-back">
+                            <h4 class="back-title">Advanced Threat Protection</h4>
+                            <ul class="back-features">
+                                <li>AI Endpoint Security</li>
+                                <li>Zero-Trust Policies</li>
+                                <li>MDR/EDR Setup</li>
+                                <li>Proactive Hunting</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Implementation -->
                 <div class="service-card reveal-stagger">
                     <div class="service-card-inner">
-                        <div class="service-icon-wrapper">
-                            <img src="images/icon_implementation_clean.png" alt="Implementation Icon">
+                        <div class="service-card-front">
+                            <div class="service-tag">Technical Setup</div>
+                            <div class="service-icon-wrapper">
+                                <img src="images/icon_implementation_clean.png" alt="Implementation Icon">
+                            </div>
+                            <h3 class="service-title">Security Solutioning & Implementation</h3>
                         </div>
-                        <h3 class="service-title">Security Solutioning & Implementation</h3>
-                        <p class="service-description">
-                            Precision deployment of enterprise-grade security tools.
-                            Expert configuration, hardware tuning, and staff training
-                            tailored to your specific business requirements.
-                        </p>
+                        <div class="service-card-back">
+                            <h4 class="back-title">Security Implementation</h4>
+                            <ul class="back-features">
+                                <li>Custom Setup</li>
+                                <li>Tool Tuning</li>
+                                <li>Staff Training</li>
+                                <li>Hybrid Integration</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Monitoring -->
                 <div class="service-card reveal-stagger">
                     <div class="service-card-inner">
-                        <div class="service-icon-wrapper">
-                            <img src="images/icon_monitoring_clean.png" alt="Monitoring Icon">
+                        <div class="service-card-front">
+                            <div class="service-tag">24/7 Oversight</div>
+                            <div class="service-icon-wrapper">
+                                <img src="images/icon_monitoring_clean.png" alt="Monitoring Icon">
+                            </div>
+                            <h3 class="service-title">Real-Time Security Monitoring</h3>
                         </div>
-                        <h3 class="service-title">Real-Time Security Monitoring</h3>
-                        <p class="service-description">
-                            Around-the-clock technical oversight. Our SOC experts provide
-                            continuous surveillance and rapid incident containment to
-                            guarantee business continuity at all times.
-                        </p>
+                        <div class="service-card-back">
+                            <h4 class="back-title">Security Monitoring</h4>
+                            <ul class="back-features">
+                                <li>24x7 Surveillance</li>
+                                <li>Incident Warning</li>
+                                <li>SIEM Operations</li>
+                                <li>Monthly Briefings</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -265,136 +296,90 @@
 
     <!-- ABC Framework Section -->
     <section id="abc-framework" style="overflow: hidden;">
-        <div class="container">
+        <div class="container-wide">
             <div class="section-header reveal">
                 <span class="section-subtitle">OUR STRATEGY</span>
-                <h2 class="section-main-title">The ABC of Cybersecurity</h2>
+                <h2 class="section-main-title glow-text">The ABC of Cybersecurity</h2>
                 <p class="section-description-text">
                     A strategic, multi-stage approach to securing your digital landscape.
                     From initial visibility to always-on protection.
                 </p>
             </div>
 
-            <div class="abc-pipeline">
+            <div class="abc-hero-visual reveal">
+                <div class="abc-visual-glow"></div>
+                <img src="images/FAC34480-A342-4808-B410-19D429DD1778_1_201_a.jpeg" alt="ABC Methodology Visual"
+                    class="abc-main-img">
+            </div>
+
+            <div class="abc-stages-row">
                 <!-- A - Assess -->
-                <div class="abc-stage reveal-stagger">
-                    <div class="pipeline-node">A</div>
-                    <div class="stage-visual">
-                        <img src="images/assess_stage_v2.png" alt="Assess Stage"
-                            style="mix-blend-mode: screen; filter: contrast(1.1) brightness(1.2);">
+                <div class="abc-card reveal-stagger">
+                    <div class="abc-card-header">
+                        <span class="abc-letter">A</span>
+                        <span class="abc-phase">Phase 01</span>
                     </div>
-                    <div class="stage-content">
-                        <div class="stage-tag">Phase 01: Visibility</div>
-                        <h3 class="stage-title">Assess – Attack Surface Snapshot</h3>
-                        <p class="stage-desc">
-                            Uncover risks and gain visibility before attackers do. We perform a deep-dive scan of your
-                            external and internal digital footprint.
-                        </p>
-                        <ul class="stage-features">
-                            <li>External risk scans</li>
-                            <li>Critical risk scoring</li>
-                            <li>Vulnerability mapping</li>
-                            <li>Remediation tips</li>
-                            <li>Executive summary</li>
-                            <li>Actionable insights</li>
-                        </ul>
-                        <div class="stage-footer">
-                            <a href="#contact" class="btn btn-primary">Start Assessment</a>
-                            <span
-                                style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem;">EST:
-                                48 HOURS</span>
-                        </div>
-                    </div>
-                    <div class="stage-number-bg">01</div>
+                    <h3 class="abc-card-title">Assess</h3>
+                    <p class="abc-card-subtitle">Attack Surface Snapshot</p>
+                    <ul class="abc-card-features">
+                        <li>External risk scans</li>
+                        <li>Vulnerability mapping</li>
+                        <li>Actionable insights</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-sm">Start Assessment</a>
                 </div>
 
                 <!-- B - Build -->
-                <div class="abc-stage reveal-stagger">
-                    <div class="pipeline-node">B</div>
-                    <div class="stage-content">
-                        <div class="stage-tag">Phase 02: Resilience</div>
-                        <h3 class="stage-title">Build – Baseline Security Review</h3>
-                        <p class="stage-desc">
-                            Strengthen your foundation with compliance and resilience. We bridge the gap between where
-                            you are and where you need to be.
-                        </p>
-                        <ul class="stage-features">
-                            <li>ISO/SOC2 Assessment</li>
-                            <li>Configuration checks</li>
-                            <li>Security roadmap</li>
-                            <li>Policy refinement</li>
-                            <li>Technical audits</li>
-                            <li>Staff training</li>
-                        </ul>
-                        <div class="stage-footer">
-                            <a href="#contact" class="btn btn-primary">Build Strategy</a>
-                            <span
-                                style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem;">TAILORED
-                                SCOPE</span>
-                        </div>
+                <div class="abc-card reveal-stagger">
+                    <div class="abc-card-header">
+                        <span class="abc-letter">B</span>
+                        <span class="abc-phase">Phase 02</span>
                     </div>
-                    <div class="stage-visual">
-                        <img src="images/build_stage_v2.png" alt="Build Stage"
-                            style="mix-blend-mode: screen; filter: contrast(1.1) brightness(1.2);">
-                    </div>
-                    <div class="stage-number-bg">02</div>
+                    <h3 class="abc-card-title">Build</h3>
+                    <p class="abc-card-subtitle">Baseline Security Review</p>
+                    <ul class="abc-card-features">
+                        <li>ISO/SOC2 Assessment</li>
+                        <li>Security roadmap</li>
+                        <li>Staff training</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-sm">Build Strategy</a>
                 </div>
 
                 <!-- C - Conquer -->
-                <div class="abc-stage reveal-stagger">
-                    <div class="pipeline-node">C</div>
-                    <div class="stage-visual">
-                        <img src="images/conquer_stage_v2.png" alt="Conquer Stage"
-                            style="mix-blend-mode: screen; filter: contrast(1.1) brightness(1.2);">
+                <div class="abc-card reveal-stagger">
+                    <div class="abc-card-header">
+                        <span class="abc-letter">C</span>
+                        <span class="abc-phase">Phase 03</span>
                     </div>
-                    <div class="stage-content">
-                        <div class="stage-tag">Phase 03: Dominance</div>
-                        <h3 class="stage-title">Conquer – Cyber 360° Defence</h3>
-                        <p class="stage-desc">
-                            Achieve always-on protection with 24/7 monitoring and rapid response. Continuous security
-                            for evolving threats.
-                        </p>
-                        <ul class="stage-features">
-                            <li>24/7 SOC Monitoring</li>
-                            <li>Incident Containment</li>
-                            <li>Threat Hunting</li>
-                            <li>Cloud Security</li>
-                            <li>EDR/MDR Support</li>
-                            <li>Daily Briefings</li>
-                        </ul>
-                        <div class="stage-footer">
-                            <a href="#contact" class="btn btn-primary">Secure Assets</a>
-                            <span
-                                style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem;">24/7
-                                PROTECTION</span>
-                        </div>
-                    </div>
-                    <div class="stage-number-bg">03</div>
+                    <h3 class="abc-card-title">Conquer</h3>
+                    <p class="abc-card-subtitle">Cyber 360° Defence</p>
+                    <ul class="abc-card-features">
+                        <li>24/7 SOC Monitoring</li>
+                        <li>Incident Containment</li>
+                        <li>Threat Hunting</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-sm">Secure Assets</a>
                 </div>
             </div>
-
-            <div style="text-align: center; margin-top: 6rem;" class="reveal">
-                <p style="font-size: 1.5rem; color: var(--text-glow); margin-bottom: 2rem; font-weight: 700;">
-                    Pick your phase. Progress with confidence.
-                </p>
-                <div
-                    style="width: 100px; height: 4px; background: var(--cyber-blue); margin: 0 auto; border-radius: 2px; box-shadow: 0 0 15px var(--cyber-blue);">
-                </div>
+            <div class="abc-cta reveal" style="text-align: center; margin-top: 3rem;">
+                <a href="#contact" class="btn btn-primary">Start Your Assessment</a>
+                <a href="#what-we-do" class="btn btn-outline">Explore Services</a>
             </div>
         </div>
     </section>
 
     <!-- Who We Are Section - FORENSIC REDESIGN -->
-    <section id="who-we-are">
+    <section id="who-we-are" class="premium-highlight-section">
         <!-- Visual Background Elements (No Images) -->
         <div class="forensic-bg-text">SECURITY</div>
         <div class="forensic-scanner"></div>
         <div class="forensic-grid"></div>
+        <div class="section-glow-overlay"></div>
 
         <div class="container" style="position: relative; z-index: 2;">
             <div class="section-header reveal">
                 <span class="section-subtitle">THE COMPANY</span>
-                <h2 class="section-main-title">Who We Are</h2>
+                <h2 class="section-main-title glow-text">Who We Are</h2>
             </div>
 
             <div class="who-we-are-content">
@@ -446,57 +431,56 @@
     </section>
 
     <!-- Our Vision Section -->
-    <section id="vision">
+    <section id="vision" class="premium-highlight-section">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-subtitle">OUR VALUES</span>
-                <h2 class="section-main-title">Our Vision</h2>
+                <h2 class="section-main-title glow-text">Our Vision</h2>
             </div>
 
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem;">
-                <div class="reveal" style="text-align: center;">
-                    <img src="images/vision_v3.png" alt="Our Vision"
-                        style="max-width: 100%; border-radius: var(--radius-xl); mix-blend-mode: screen; filter: brightness(1.2) contrast(1.1); margin-bottom: 2rem;">
+            <div class="vision-content">
+                <div class="vision-statement reveal">
+                    <p class="vision-lead">
+                        To create a <span class="highlight-word">robust digital ecosystem</span> where organizations are
+                        no longer
+                        <span class="pain-word">easy targets</span> for cyber attackers.
+                    </p>
                 </div>
 
-                <div class="reveal" style="display: flex; flex-direction: column; justify-content: center;">
-                    <h3 style="color: var(--cyber-blue); margin-bottom: 2rem; font-size: 1.8rem;">
-                        To create a robust digital ecosystem where organizations are no longer easy targets for
-                        cyber attackers.
-                    </h3>
+                <div class="vision-grid reveal">
+                    <div class="vision-intro">
+                        <h3>We envision a future where cybersecurity is:</h3>
+                    </div>
 
-                    <p
-                        style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
-                        We envision a future where cybersecurity is:
-                    </p>
+                    <div class="vision-pillars">
+                        <div class="vision-pillar">
+                            <span class="pillar-keyword">Proactive</span>
+                            <span class="pillar-contrast">rather than <span class="pain-word">reactive</span></span>
+                        </div>
 
-                    <ul style="list-style: none; padding: 0;">
-                        <li class="premium-check">
-                            <span class="check-icon">🛡️</span>
-                            <span style="font-size: 1.1rem;"><strong style="color: var(--text-glow);">Proactive</strong>
-                                rather than reactive</span>
-                        </li>
-                        <li class="premium-check">
-                            <span class="check-icon">💎</span>
-                            <span style="font-size: 1.1rem;"><strong
-                                    style="color: var(--text-glow);">Affordable</strong> rather than prohibitive</span>
-                        </li>
-                        <li class="premium-check">
-                            <span class="check-icon">🧠</span>
-                            <span style="font-size: 1.1rem;"><strong
-                                    style="color: var(--text-glow);">Understood</strong> rather than ignored</span>
-                        </li>
-                        <li class="premium-check">
-                            <span class="check-icon">⚡</span>
-                            <span style="font-size: 1.1rem;"><strong
-                                    style="color: var(--text-glow);">Integrated</strong> into business operations</span>
-                        </li>
-                    </ul>
+                        <div class="vision-pillar">
+                            <span class="pillar-keyword">Affordable</span>
+                            <span class="pillar-contrast">rather than <span class="pain-word">prohibitive</span></span>
+                        </div>
 
-                    <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-top: 2rem;">
-                        By raising awareness and delivering meaningful protection, we strive to help businesses grow
-                        securely in a digital-first world.
+                        <div class="vision-pillar">
+                            <span class="pillar-keyword">Understood</span>
+                            <span class="pillar-contrast">rather than <span class="pain-word">ignored</span></span>
+                        </div>
+
+                        <div class="vision-pillar">
+                            <span class="pillar-keyword">Integrated</span>
+                            <span class="pillar-contrast">into <span class="highlight-word">business
+                                    operations</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vision-closing reveal">
+                    <p>
+                        By raising <span class="highlight-word">awareness</span> and delivering <span
+                            class="highlight-word">meaningful protection</span>,
+                        we strive to help businesses grow securely in a digital-first world.
                     </p>
                 </div>
             </div>
@@ -506,97 +490,118 @@
     <!-- Our Approach Section -->
     <section id="our-approach">
         <div class="container">
-            <div class="section-title reveal">
-                <h2>Our Approach</h2>
-                <p style="color: var(--text-muted); font-size: 1.2rem; margin-top: 1rem;">
-                    Clarity Before Complexity
-                </p>
+            <div class="section-header reveal">
+                <span class="section-subtitle">HOW WE WORK</span>
+                <h2 class="section-main-title glow-text">Our Approach</h2>
             </div>
 
-            <div class="reveal" style="max-width: 900px; margin: 0 auto; text-align: center; margin-bottom: 4rem;">
-                <p style="font-size: 1.2rem; line-height: 1.9; color: var(--text-secondary);">
-                    At HIQurate Ops, we focus on <span style="color: var(--cyber-blue); font-weight: 700;">clarity
-                        before complexity</span>.
-                    Effective security starts with understanding what needs protection, where the risks exist, and how
-                    attackers are most likely to exploit them.
-                </p>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card reveal-stagger"
-                    style="background: var(--gradient-card); border-color: rgba(0, 212, 255, 0.3);">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎓</div>
-                    <h3 style="color: var(--cyber-blue); font-size: 1.3rem; margin-bottom: 0.5rem;">Awareness &
-                        Education</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                        Understanding real risks—not just theoretical ones
-                    </p>
-                </div>
-
-                <div class="stat-card reveal-stagger"
-                    style="background: var(--gradient-card); border-color: rgba(168, 85, 247, 0.3);">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
-                    <h3 style="color: var(--cyber-purple); font-size: 1.3rem; margin-bottom: 0.5rem;">Early Risk
-                        Identification</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                        Before threats turn into incidents
-                    </p>
-                </div>
-
-                <div class="stat-card reveal-stagger"
-                    style="background: var(--gradient-card); border-color: rgba(20, 184, 166, 0.3);">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
-                    <h3 style="color: var(--cyber-teal); font-size: 1.3rem; margin-bottom: 0.5rem;">Tailored Strategies
+            <div class="approach-content">
+                <div class="approach-tagline reveal">
+                    <h3><span class="highlight-word">Clarity</span> Before <span class="pain-word">Complexity</span>
                     </h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                        Designed specifically for high-growth environments
+                </div>
+
+                <div class="approach-intro reveal">
+                    <p>
+                        Effective security starts with understanding <span class="highlight-word">what needs
+                            protection</span>,
+                        where the <span class="pain-word">risks exist</span>, and how attackers are most likely to
+                        exploit them.
                     </p>
                 </div>
 
-                <div class="stat-card reveal-stagger"
-                    style="background: var(--gradient-card); border-color: rgba(99, 102, 241, 0.3);">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
-                    <h3 style="color: var(--cyber-indigo); font-size: 1.3rem; margin-bottom: 0.5rem;">Cost-Effective
-                        Protection</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                        Value without enterprise-level overhead
+                <div class="approach-pillars">
+                    <div class="approach-pillar reveal-stagger">
+                        <span class="pillar-number">01</span>
+                        <h4 class="pillar-title">Awareness & Education</h4>
+                        <p class="pillar-desc">Understanding <span class="highlight-word">real risks</span>—not just
+                            theoretical ones</p>
+                    </div>
+
+                    <div class="approach-pillar reveal-stagger">
+                        <span class="pillar-number">02</span>
+                        <h4 class="pillar-title">Early Risk Identification</h4>
+                        <p class="pillar-desc">Before <span class="pain-word">threats</span> turn into <span
+                                class="pain-word">incidents</span></p>
+                    </div>
+
+                    <div class="approach-pillar reveal-stagger">
+                        <span class="pillar-number">03</span>
+                        <h4 class="pillar-title">Tailored Strategies</h4>
+                        <p class="pillar-desc">Designed specifically for <span class="highlight-word">high-growth
+                                environments</span></p>
+                    </div>
+
+                    <div class="approach-pillar reveal-stagger">
+                        <span class="pillar-number">04</span>
+                        <h4 class="pillar-title">Cost-Effective Protection</h4>
+                        <p class="pillar-desc">Value without <span class="pain-word">enterprise-level overhead</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="approach-closing reveal">
+                    <p>
+                        We help organisations build <span class="highlight-word">resilience</span> without overwhelming
+                        them with
+                        <span class="pain-word">tools</span>, <span class="pain-word">jargon</span>, or <span
+                            class="pain-word">unnecessary expenses</span>.
                     </p>
                 </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 4rem;" class="reveal">
-                <p style="font-size: 1.2rem; color: var(--text-glow); max-width: 800px; margin: 0 auto;">
-                    We help organisations build resilience <strong>without overwhelming them</strong> with tools,
-                    jargon, or unnecessary expenses.
-                </p>
             </div>
         </div>
     </section>
 
-    <!-- Video Showcase -->
-    <section class="video-section">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>Cybersecurity Awareness</h2>
-                <p style="color: var(--text-muted); font-size: 1.2rem; margin-top: 1rem;">
-                    Understanding Modern Cyber Threats
-                </p>
-            </div>
-            <div class="video-container reveal">
-                <video autoplay muted loop playsinline
-                    poster="images/fstP8OPsEXeBaTckDUaf4wxMI1jhxzChd1YOwX9Vi7GQ08qvzaW1hK4ZeQ0T9kl1.jpeg">
-                    <source
-                        src="https://cdn.pixabay.com/vimeo/408921998/network-30169.mp4?width=1280&hash=f21f26e0fb3d4c05889dbd98b9e7c40d5f8bafbd"
-                        type="video/mp4">
-                </video>
-                <div class="video-overlay">
-                    <div class="video-overlay-content">
-                        <h3>The Reality of Cyber Threats</h3>
-                        <p>Cybersecurity incidents in small and medium businesses rarely occur due to negligence. They
-                            happen because organisations underestimate their exposure or are unaware of how modern
-                            attacks actually work.</p>
+    <!-- Threat Intelligence Showcase -->
+    <section id="threat-intel" class="threat-section">
+        <div class="container-wide">
+            <div class="threat-layout">
+                <div class="threat-left reveal">
+                    <span class="threat-eyebrow">THREAT LANDSCAPE</span>
+                    <h2 class="threat-headline">The <span class="highlight-word">Reality</span> of Cyber Threats</h2>
+                    <p class="threat-desc">
+                        Cybersecurity incidents rarely occur due to <span class="pain-word">negligence</span>.
+                        They happen because organisations <span class="pain-word">underestimate</span> their exposure or
+                        are
+                        <span class="pain-word">unaware</span> of how modern attacks actually work.
+                    </p>
+                    <div class="threat-cta">
+                        <a href="#contact" class="btn btn-primary">Assess Your Risk</a>
                     </div>
                 </div>
+
+                <div class="threat-right reveal">
+                    <div class="threat-stats-grid">
+                        <div class="threat-stat">
+                            <span class="stat-value">71%</span>
+                            <span class="stat-label">of organisations experienced a <span class="pain-word">cyber
+                                    incident</span> last year</span>
+                        </div>
+
+                        <div class="threat-stat">
+                            <span class="stat-value">74%</span>
+                            <span class="stat-label">of breaches involve the <span class="pain-word">human
+                                    element</span></span>
+                        </div>
+
+                        <div class="threat-stat">
+                            <span class="stat-value">204</span>
+                            <span class="stat-label">days average time to <span class="pain-word">detect a
+                                    breach</span></span>
+                        </div>
+
+                        <div class="threat-stat">
+                            <span class="stat-value">89%</span>
+                            <span class="stat-label">of <span class="highlight-word">boards</span> classify
+                                cybersecurity as <span class="highlight-word">top strategic priority</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="threat-warning reveal">
+                <div class="warning-bar"></div>
+                <p>Don't become a statistic. Get <span class="highlight-word">proactive protection</span> today.</p>
             </div>
         </div>
     </section>
@@ -604,9 +609,8 @@
     <!-- CTA Section -->
     <section id="final-cta">
         <div class="container">
-            <div style="background: var(--gradient-card); padding: 5rem 4rem; border-radius: var(--radius-xl); text-align: center; border: 2px solid rgba(0, 212, 255, 0.3); box-shadow: var(--shadow-xl), var(--glow-blue); backdrop-filter: blur(20px);"
-                class="reveal">
-                <div class="cert-badge" style="margin-bottom: 2rem;">🏆 ISO 27002:2022 Certified Auditors</div>
+            <div class="cta-premium-box reveal">
+                <div class="cert-badge" style="margin-bottom: 2rem;">ISO 27002:2022 Certified Auditors</div>
                 <h2 style="margin-bottom: 1.5rem; font-size: clamp(2rem, 4vw, 3rem);">Ready to Secure Your Business?
                 </h2>
                 <p
@@ -651,14 +655,12 @@
 
                     <div class="contact-stats">
                         <div class="stat-item">
-                            <div class="stat-icon">⚡</div>
                             <div class="stat-content">
                                 <div class="stat-value">&lt;24h</div>
                                 <div class="stat-label">Response Time</div>
                             </div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-icon">🏆</div>
                             <div class="stat-content">
                                 <div class="stat-value">ISO 27002</div>
                                 <div class="stat-label">Certified Auditors</div>
@@ -670,7 +672,6 @@
                         <h4 style="color: var(--cyber-blue); margin-bottom: 1.5rem; font-size: 1.3rem;">Direct Contact
                         </h4>
                         <div class="method-item">
-                            <div class="method-icon">📧</div>
                             <div class="method-content">
                                 <div class="method-label">Email</div>
                                 <a href="mailto:SayHi@HIQurateOps.com">SayHi@HIQurateOps.com</a>
@@ -686,14 +687,12 @@
                             <div class="form-field">
                                 <label for="name">Full Name *</label>
                                 <div class="input-wrapper">
-                                    <span class="input-icon">👤</span>
                                     <input type="text" id="name" name="name" required placeholder="John Doe">
                                 </div>
                             </div>
                             <div class="form-field">
                                 <label for="email">Email Address *</label>
                                 <div class="input-wrapper">
-                                    <span class="input-icon">📧</span>
                                     <input type="email" id="email" name="email" required placeholder="john@company.com">
                                 </div>
                             </div>
@@ -703,14 +702,12 @@
                             <div class="form-field">
                                 <label for="phone">Phone Number</label>
                                 <div class="input-wrapper">
-                                    <span class="input-icon">📱</span>
                                     <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
                                 </div>
                             </div>
                             <div class="form-field">
                                 <label for="company">Company Name</label>
                                 <div class="input-wrapper">
-                                    <span class="input-icon">🏢</span>
                                     <input type="text" id="company" name="company" placeholder="Your Company Ltd.">
                                 </div>
                             </div>
@@ -719,14 +716,13 @@
                         <div class="form-field">
                             <label for="service">Service Interest *</label>
                             <div class="input-wrapper">
-                                <span class="input-icon">🎯</span>
                                 <select id="service" name="service" required>
                                     <option value="">Select your security need...</option>
-                                    <option value="assess">🔍 A - Attack Surface Snapshot (Assess)</option>
-                                    <option value="build">🔨 B - Baseline Security Review (Build)</option>
-                                    <option value="conquer">⚔️ C - Cyber 360° Defence (Conquer)</option>
-                                    <option value="custom">⚙️ Custom Security Solution</option>
-                                    <option value="audit">🏆 ISO 27002:2022 Audit</option>
+                                    <option value="assess">A - Attack Surface Snapshot (Assess)</option>
+                                    <option value="build">B - Baseline Security Review (Build)</option>
+                                    <option value="conquer">C - Cyber 360° Defence (Conquer)</option>
+                                    <option value="custom">Custom Security Solution</option>
+                                    <option value="audit">ISO 27002:2022 Audit</option>
                                 </select>
                             </div>
                         </div>
@@ -734,7 +730,6 @@
                         <div class="form-field">
                             <label for="message">Security Requirements *</label>
                             <div class="input-wrapper">
-                                <span class="input-icon textarea-icon">💬</span>
                                 <textarea id="message" name="message" required
                                     placeholder="Tell us about your security challenges, current infrastructure, and what you're looking to protect..."></textarea>
                             </div>
@@ -742,11 +737,9 @@
 
                         <button type="submit" class="btn-submit">
                             <span class="btn-text">Send Secure Message</span>
-                            <span class="btn-icon">🔒</span>
                         </button>
 
                         <p class="form-disclaimer">
-                            <span class="disclaimer-icon">🔐</span>
                             Your information is encrypted and will never be shared with third parties.
                         </p>
                     </form>
