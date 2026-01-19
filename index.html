@@ -135,12 +135,12 @@
                 <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
                 <ul id="navMenu">
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#threat-intel">Threats</a></li>
                     <li><a href="#what-we-do">Services</a></li>
                     <li><a href="#abc-framework">ABC Framework</a></li>
+                    <li><a href="#our-approach">Approach</a></li>
                     <li><a href="#who-we-are">About</a></li>
                     <li><a href="#vision">Vision</a></li>
-                    <li><a href="#our-approach">Approach</a></li>
-                    <li><a href="#threat-intel">Threats</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -190,104 +190,146 @@
         </div>
     </section>
 
-    <!-- What We Do Section -->
-    <section id="what-we-do" style="background: var(--bg-deep);">
+    <!-- Threat Intelligence Showcase -->
+    <section id="threat-intel" class="threat-section">
+        <div class="container-wide">
+            <div class="threat-layout">
+                <div class="threat-left reveal">
+                    <span class="threat-eyebrow">THREAT LANDSCAPE</span>
+                    <h2 class="threat-headline">The <span class="highlight-word">Reality</span> of Cyber Threats</h2>
+                    <p class="threat-desc">
+                        Cybersecurity incidents rarely occur due to <span class="pain-word">negligence</span>.
+                        They happen because organisations <span class="pain-word">underestimate</span> their exposure or
+                        are
+                        <span class="pain-word">unaware</span> of how modern attacks actually work.
+                    </p>
+                    <div class="threat-cta">
+                        <a href="#contact" class="btn btn-primary">Assess Your Risk</a>
+                    </div>
+                </div>
+
+                <div class="threat-right reveal">
+                    <div class="threat-stats-grid">
+                        <div class="threat-stat">
+                            <span class="stat-value">71%</span>
+                            <span class="stat-label">of organisations experienced a <span class="pain-word">cyber
+                                    incident</span> last year</span>
+                        </div>
+
+                        <div class="threat-stat">
+                            <span class="stat-value">74%</span>
+                            <span class="stat-label">of breaches involve the <span class="pain-word">human
+                                    element</span></span>
+                        </div>
+
+                        <div class="threat-stat">
+                            <span class="stat-value">204</span>
+                            <span class="stat-label">days average time to <span class="pain-word">detect a
+                                    breach</span></span>
+                        </div>
+
+                        <div class="threat-stat">
+                            <span class="stat-value">89%</span>
+                            <span class="stat-label">of <span class="highlight-word">boards</span> classify
+                                cybersecurity as <span class="highlight-word">top strategic priority</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="threat-warning reveal">
+                <div class="warning-bar"></div>
+                <p>Don't become a statistic. Get <span class="highlight-word">proactive protection</span> today.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section - MODERN REBUILD -->
+    <section id="what-we-do" class="capabilities-section">
         <div class="container-wide">
             <div class="section-header reveal">
                 <span class="section-subtitle">OUR CAPABILITIES</span>
                 <h2 class="section-main-title glow-text">What We Do</h2>
                 <p class="section-description-text">
                     Strategic cybersecurity solutions tailored for organizations handling sensitive data.
-                    We bridge the gap between complex digital threats and business continuity.
+                    Built for clarity, resilience, and business continuity.
                 </p>
             </div>
 
-            <div class="features-grid flip-cards-container">
-                <!-- Risk Assessment -->
-                <div class="service-card reveal-stagger">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="service-tag">Audit & Analysis</div>
-                            <div class="service-icon-wrapper">
-                                <img src="images/icon_risk_clean.png" alt="Risk Assessment Icon">
-                            </div>
-                            <h3 class="service-title">Cyber Risk & Resilience Assessment</h3>
+            <div class="capabilities-grid">
+                <!-- Capability 1 -->
+                <div class="capability-card reveal-stagger">
+                    <div class="cap-card-border"></div>
+                    <div class="cap-content">
+                        <div class="cap-tag">AUDIT & ANALYSIS</div>
+                        <div class="cap-icon-box">
+                            <img src="images/icon_risk_clean.png" alt="Risk Assessment">
                         </div>
-                        <div class="service-card-back">
-                            <h4 class="back-title">Cyber Risk & Resilience</h4>
-                            <ul class="back-features">
-                                <li>Vulnerability Scans</li>
-                                <li>GAP Analysis</li>
-                                <li>ISO Audit Prep</li>
-                                <li>Strategic Roadmap</li>
-                            </ul>
-                        </div>
+                        <h3 class="cap-title">Cyber Risk & Resilience</h3>
+                        <p class="cap-desc">A clear view of exposure, control gaps, and audit readiness.</p>
+                        <ul class="cap-list">
+                            <li>Vulnerability Scans</li>
+                            <li>GAP Analysis</li>
+                            <li>ISO Audit Prep</li>
+                            <li>Strategic Roadmap</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Threat Protection -->
-                <div class="service-card reveal-stagger">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="service-tag">Active Defense</div>
-                            <div class="service-icon-wrapper">
-                                <img src="images/icon_threat_clean.png" alt="Threat Protection Icon">
-                            </div>
-                            <h3 class="service-title">Advanced Threat Protection Plans</h3>
+                <!-- Capability 2 -->
+                <div class="capability-card reveal-stagger">
+                    <div class="cap-card-border"></div>
+                    <div class="cap-content">
+                        <div class="cap-tag">ACTIVE DEFENSE</div>
+                        <div class="cap-icon-box">
+                            <img src="images/icon_threat_clean.png" alt="Threat Protection">
                         </div>
-                        <div class="service-card-back">
-                            <h4 class="back-title">Advanced Threat Protection</h4>
-                            <ul class="back-features">
-                                <li>AI Endpoint Security</li>
-                                <li>Zero-Trust Policies</li>
-                                <li>MDR/EDR Setup</li>
-                                <li>Proactive Hunting</li>
-                            </ul>
-                        </div>
+                        <h3 class="cap-title">Advanced Threat Protection</h3>
+                        <p class="cap-desc">Proactive defenses that reduce risk and stop attacks earlier.</p>
+                        <ul class="cap-list">
+                            <li>AI Endpoint Security</li>
+                            <li>Zero-Trust Policies</li>
+                            <li>MDR/EDR Setup</li>
+                            <li>Proactive Hunting</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Implementation -->
-                <div class="service-card reveal-stagger">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="service-tag">Technical Setup</div>
-                            <div class="service-icon-wrapper">
-                                <img src="images/icon_implementation_clean.png" alt="Implementation Icon">
-                            </div>
-                            <h3 class="service-title">Security Solutioning & Implementation</h3>
+                <!-- Capability 3 -->
+                <div class="capability-card reveal-stagger">
+                    <div class="cap-card-border"></div>
+                    <div class="cap-content">
+                        <div class="cap-tag">TECHNICAL SETUP</div>
+                        <div class="cap-icon-box">
+                            <img src="images/icon_implementation_clean.png" alt="Implementation">
                         </div>
-                        <div class="service-card-back">
-                            <h4 class="back-title">Security Implementation</h4>
-                            <ul class="back-features">
-                                <li>Custom Setup</li>
-                                <li>Tool Tuning</li>
-                                <li>Staff Training</li>
-                                <li>Hybrid Integration</li>
-                            </ul>
-                        </div>
+                        <h3 class="cap-title">Security Solutioning & Implementation</h3>
+                        <p class="cap-desc">Expert deployment of security controls without operational friction.</p>
+                        <ul class="cap-list">
+                            <li>Custom Setup</li>
+                            <li>Tool Tuning</li>
+                            <li>Staff Training</li>
+                            <li>Hybrid Integration</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Monitoring -->
-                <div class="service-card reveal-stagger">
-                    <div class="service-card-inner">
-                        <div class="service-card-front">
-                            <div class="service-tag">24/7 Oversight</div>
-                            <div class="service-icon-wrapper">
-                                <img src="images/icon_monitoring_clean.png" alt="Monitoring Icon">
-                            </div>
-                            <h3 class="service-title">Real-Time Security Monitoring</h3>
+                <!-- Capability 4 -->
+                <div class="capability-card reveal-stagger">
+                    <div class="cap-card-border"></div>
+                    <div class="cap-content">
+                        <div class="cap-tag">24/7 OVERSIGHT</div>
+                        <div class="cap-icon-box">
+                            <img src="images/icon_monitoring_clean.png" alt="Monitoring">
                         </div>
-                        <div class="service-card-back">
-                            <h4 class="back-title">Security Monitoring</h4>
-                            <ul class="back-features">
-                                <li>24x7 Surveillance</li>
-                                <li>Incident Warning</li>
-                                <li>SIEM Operations</li>
-                                <li>Monthly Briefings</li>
-                            </ul>
-                        </div>
+                        <h3 class="cap-title">Monitoring & Response</h3>
+                        <p class="cap-desc">Always-on monitoring with guided action when something changes.</p>
+                        <ul class="cap-list">
+                            <li>24x7 Surveillance</li>
+                            <li>Incident Warning</li>
+                            <li>SIEM Operations</li>
+                            <li>Monthly Briefings</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -552,60 +594,6 @@
         </div>
     </section>
 
-    <!-- Threat Intelligence Showcase -->
-    <section id="threat-intel" class="threat-section">
-        <div class="container-wide">
-            <div class="threat-layout">
-                <div class="threat-left reveal">
-                    <span class="threat-eyebrow">THREAT LANDSCAPE</span>
-                    <h2 class="threat-headline">The <span class="highlight-word">Reality</span> of Cyber Threats</h2>
-                    <p class="threat-desc">
-                        Cybersecurity incidents rarely occur due to <span class="pain-word">negligence</span>.
-                        They happen because organisations <span class="pain-word">underestimate</span> their exposure or
-                        are
-                        <span class="pain-word">unaware</span> of how modern attacks actually work.
-                    </p>
-                    <div class="threat-cta">
-                        <a href="#contact" class="btn btn-primary">Assess Your Risk</a>
-                    </div>
-                </div>
-
-                <div class="threat-right reveal">
-                    <div class="threat-stats-grid">
-                        <div class="threat-stat">
-                            <span class="stat-value">71%</span>
-                            <span class="stat-label">of organisations experienced a <span class="pain-word">cyber
-                                    incident</span> last year</span>
-                        </div>
-
-                        <div class="threat-stat">
-                            <span class="stat-value">74%</span>
-                            <span class="stat-label">of breaches involve the <span class="pain-word">human
-                                    element</span></span>
-                        </div>
-
-                        <div class="threat-stat">
-                            <span class="stat-value">204</span>
-                            <span class="stat-label">days average time to <span class="pain-word">detect a
-                                    breach</span></span>
-                        </div>
-
-                        <div class="threat-stat">
-                            <span class="stat-value">89%</span>
-                            <span class="stat-label">of <span class="highlight-word">boards</span> classify
-                                cybersecurity as <span class="highlight-word">top strategic priority</span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="threat-warning reveal">
-                <div class="warning-bar"></div>
-                <p>Don't become a statistic. Get <span class="highlight-word">proactive protection</span> today.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Section -->
     <section id="final-cta">
         <div class="container">
@@ -633,7 +621,7 @@
                 <span class="section-subtitle">GET COMMENCED</span>
                 <h2 class="section-main-title">Secure Your Future</h2>
                 <p class="section-description-text">
-                    Our ISO 27002:2022 certified security experts are ready to assess your operational needs.
+                    Our security experts are ready to assess your operational needs.
                 </p>
             </div>
 
