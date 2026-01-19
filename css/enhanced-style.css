@@ -725,11 +725,11 @@ section {
 /* ============================================
    WHAT WE DO (CAPABILITIES) - 4 CARD GRID
    ============================================ */
-.capabilities-section {
+#what-we-do.capabilities-section {
     position: relative;
 }
 
-.capabilities-grid {
+#what-we-do .capabilities-grid {
     margin-top: 3.5rem;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -739,7 +739,11 @@ section {
     z-index: 10;
 }
 
-.capability-card {
+#what-we-do .capabilities-grid>* {
+    min-width: 0;
+}
+
+#what-we-do .capability-card {
     position: relative;
     border-radius: var(--radius-xl);
     background: linear-gradient(145deg, rgba(15, 20, 35, 0.78) 0%, rgba(10, 15, 25, 0.9) 100%);
@@ -747,15 +751,16 @@ section {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
     overflow: hidden;
     transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.45s, box-shadow 0.45s;
+    display: block;
 }
 
-.capability-card:hover {
+#what-we-do .capability-card:hover {
     transform: translateY(-10px);
     border-color: rgba(126, 184, 218, 0.55);
     box-shadow: 0 35px 90px rgba(0, 0, 0, 0.5), 0 0 40px rgba(126, 184, 218, 0.12);
 }
 
-.cap-card-border {
+#what-we-do .cap-card-border {
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -764,7 +769,7 @@ section {
     opacity: 0.9;
 }
 
-.capability-card::after {
+#what-we-do .capability-card::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -774,11 +779,11 @@ section {
     transition: transform 1s ease;
 }
 
-.capability-card:hover::after {
+#what-we-do .capability-card:hover::after {
     transform: translateX(110%);
 }
 
-.cap-content {
+#what-we-do .cap-content {
     position: relative;
     z-index: 2;
     padding: 2.25rem 2rem;
@@ -787,7 +792,7 @@ section {
     flex-direction: column;
 }
 
-.cap-tag {
+#what-we-do .cap-tag {
     align-self: flex-start;
     font-family: var(--font-mono);
     font-size: 0.72rem;
@@ -802,7 +807,7 @@ section {
     margin-bottom: 1.25rem;
 }
 
-.cap-icon-box {
+#what-we-do .cap-icon-box {
     width: 72px;
     height: 72px;
     border-radius: 18px;
@@ -815,7 +820,7 @@ section {
     box-shadow: 0 0 30px rgba(126, 184, 218, 0.08);
 }
 
-.cap-icon-box img {
+#what-we-do .cap-icon-box img {
     width: 44px;
     height: 44px;
     object-fit: contain;
@@ -824,7 +829,7 @@ section {
     transform: translateZ(0);
 }
 
-.capability-card:hover .cap-icon-box img {
+#what-we-do .capability-card:hover .cap-icon-box img {
     animation: capIconFloat 2.8s ease-in-out infinite;
 }
 
@@ -840,7 +845,7 @@ section {
     }
 }
 
-.cap-title {
+#what-we-do .cap-title {
     font-size: 1.25rem;
     font-weight: 800;
     color: #fff;
@@ -848,14 +853,14 @@ section {
     letter-spacing: -0.01em;
 }
 
-.cap-desc {
+#what-we-do .cap-desc {
     font-size: 1rem;
     color: var(--text-secondary);
     opacity: 0.9;
     margin-bottom: 1.25rem;
 }
 
-.cap-list {
+#what-we-do .cap-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -864,7 +869,7 @@ section {
     padding-top: 1.25rem;
 }
 
-.cap-list li {
+#what-we-do .cap-list li {
     display: flex;
     align-items: center;
     gap: 0.65rem;
@@ -874,28 +879,28 @@ section {
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.cap-list li:last-child {
+#what-we-do .cap-list li:last-child {
     border-bottom: none;
 }
 
-.cap-list li::before {
+#what-we-do .cap-list li::before {
     content: '→';
     color: var(--cyber-primary);
     font-weight: 900;
 }
 
 @media (max-width: 1200px) {
-    .capabilities-grid {
+    #what-we-do .capabilities-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 640px) {
-    .capabilities-grid {
+    #what-we-do .capabilities-grid {
         grid-template-columns: 1fr;
     }
 
-    .cap-content {
+    #what-we-do .cap-content {
         padding: 2rem 1.5rem;
     }
 }
