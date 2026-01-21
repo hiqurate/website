@@ -144,8 +144,8 @@
                             <span class="pillar-contrast">not <span class="pain-word">ignored</span></span>
                         </div>
                         <div class="vision-pillar">
-                            <span class="pillar-keyword">Integrated</span>
-                            <span class="pillar-contrast">into <span class="highlight-word">ops</span></span>
+                            <span class="pillar-keyword">Embedded</span>
+                            <span class="pillar-contrast">not <span class="pain-word">siloed</span></span>
                         </div>
                     </div>
                 </div>
@@ -378,6 +378,18 @@
                 if (card.classList.contains('open')) close(); else open();
             });
             window.addEventListener('resize', syncState);
+        });
+
+        // 3D Flip Cards Touch Support
+        document.querySelectorAll('.approach-card-3d').forEach(card => {
+            card.addEventListener('click', function (e) {
+                if (window.innerWidth <= 1024) {
+                    this.classList.toggle('flipped');
+                    document.querySelectorAll('.approach-card-3d').forEach(other => {
+                        if (other !== card) other.classList.remove('flipped');
+                    });
+                }
+            });
         });
 
         // Activate reveal elements (no observer on this page)
