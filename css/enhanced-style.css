@@ -3202,16 +3202,17 @@ section {
     .quick-jump {
         display: flex;
         top: auto;
-        bottom: 18px;
-        right: 12px;
-        left: 12px;
-        justify-content: center;
+        bottom: 20px;
+        right: 10px;
+        left: 10px;
+        justify-content: flex-start;
         flex-wrap: nowrap;
-        gap: 0.2rem;
+        gap: 0.25rem;
         overflow-x: auto;
         white-space: nowrap;
         padding: 0.4rem;
         -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
 
     .quick-jump::-webkit-scrollbar {
@@ -3219,9 +3220,12 @@ section {
     }
 
     .quick-jump a {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.7rem;
+        padding: 0.4rem 0.75rem;
+        font-size: 0.65rem;
         flex-shrink: 0;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-weight: 700;
     }
 
     .accordion-body {
@@ -3919,7 +3923,7 @@ section {
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 20px;
+        padding: 0 15px;
     }
 
     /* Mobile Navigation Modern */
@@ -3957,7 +3961,7 @@ section {
 
     /* Section Spacing */
     section {
-        padding: 60px 20px;
+        padding: 60px 15px;
     }
 
     .section-header {
@@ -4068,12 +4072,31 @@ section {
     }
 
     .cta-premium-box {
-        padding: 2.5rem 1.5rem;
+        padding: 2.5rem 1rem;
+        margin: 0;
+        width: 100%;
+    }
+
+    .cta-premium-box h2 {
+        font-size: 1.75rem !important;
+        line-height: 1.2;
+    }
+
+    .cta-premium-box p {
+        font-size: 0.95rem !important;
+        padding: 0 5px;
+    }
+
+    .contact-cta-inline .btn-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem !important;
     }
 
     .cert-badge {
-        font-size: 0.7rem !important;
-        padding: 0.4rem 0.8rem !important;
+        font-size: 0.65rem !important;
+        padding: 0.4rem 0.6rem !important;
+        line-height: 1.2;
     }
 
     .contact-methods {
